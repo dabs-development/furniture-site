@@ -1,112 +1,106 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { Tabs, TabList,Tab,ButtonGroup, Button } from '@chakra-ui/react'
+import {Box} from '@chakra-ui/react'
+import { Flex, Spacer ,Link} from '@chakra-ui/react'
 import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    Box
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    FormControl,
+    FormLabel,
+    Input,
+    useDisclosure
 } from '@chakra-ui/react'
 
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-} from '@chakra-ui/react'
 
-const codeStyles = {
-    display: 'flex',
-    height: '100px',
-    background: 'linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db',
 
-}
 
-const navbar = {
-    marginRight: 'auto',
-    display: 'flex',
-    marginLeft: '20px',
-    fontSize: '20px',
-    fontWeight: '500',
-}
 
-const link = {
-    fontWeight: '400',
-    textDecoration: "none",
-}
 
 
 const Header = () => {
 
-    return (
-        <Box as="header" style={codeStyles}>
-            <Breadcrumb fontWeight='medium' fontSize='sm' style={navbar}>
-                <BreadcrumbItem >
-                    <BreadcrumbLink href='#' style={link}>Кухни</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <Menu>
-                        <MenuButton >
-                            Шкафы
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem >Распашные шкафы</MenuItem>
-                            <MenuItem >Шкафы купэ</MenuItem>
-                            <MenuItem >Элитные шкафы</MenuItem>
-                        </MenuList>
-                    </Menu>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <BreadcrumbLink href='#' style={link}>Гардеробные</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <BreadcrumbLink href='#' style={link}>Ванная</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <BreadcrumbLink href='#' style={link}>Спальня</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <BreadcrumbLink href='#' style={link}>Техника</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <BreadcrumbLink href='#' style={link}>Все для мебели</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <Menu>
-                        <MenuButton>
-                            О нас
-                        </MenuButton>
-                        <MenuList >
-                            <MenuItem >О компании</MenuItem>
-                            <MenuItem >Отзывы</MenuItem>
-                        </MenuList>
-                    </Menu>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <Menu>
-                        <MenuButton >
-                            Покупателю
-                        </MenuButton>
-                        <MenuList >
-                            <MenuItem >Гарантия</MenuItem>
-                            <MenuItem >Сборка</MenuItem>
-                            <MenuItem >Доставка</MenuItem>
-                            <MenuItem >Дизайн замер</MenuItem>
-                            <MenuItem >Оплата</MenuItem>
-                            <MenuItem >Акции</MenuItem>
-                        </MenuList>
-                    </Menu>
-                </BreadcrumbItem>
-                <BreadcrumbItem >
-                    <BreadcrumbLink href='#' style={link}>Контакты</BreadcrumbLink>
-                </BreadcrumbItem>
-            </Breadcrumb>
-            <StaticImage
-                src="../images/fur.avif"
-                width={100}
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const initialRef = React.useRef(null)
+    const finalRef = React.useRef(null)
 
-                quality={95}
-                style={{ backgroundSize: 'cover' }}
-            />
+    return (
+        <Box as="header" bg='linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)' height='270px'>
+            <Box width="100%" display='flex' bg="#ffffff">
+                <Tabs m="auto" >
+                    <TabList  >
+                        <Tab fontSize='2xl'>Акции</Tab>
+                        <Tab fontSize='2xl'>Примеры работ</Tab>
+                        <Tab fontSize='2xl'>Отзывы</Tab>
+                        <Tab fontSize='2xl'>Контакты</Tab>
+                    </TabList>
+                </Tabs>
+            </Box>
+            <Flex>
+       
+                <Box paddingTop='15px' paddingBottom='15px' marginLeft="2%">
+                    <StaticImage
+
+                        src="../images/fur.avif"
+                        width={100}
+                        quality={95}
+                        style={{ backgroundSize: 'cover' }}
+                    />
+                </Box>
+                <Spacer />
+                <ButtonGroup gap='2' paddingTop='65px' paddingLeft='18%'>
+                    <Button colorScheme='teal' onClick={onOpen}>РАСЧИТАТЬ ПРОЕКТ</Button>
+                    <Button colorScheme='teal'>НАПИСАТЬ В WHATSAPP</Button>
+                    <Modal
+                        initialFocusRef={initialRef}
+                        finalFocusRef={finalRef}
+                        isOpen={isOpen}
+                        onClose={onClose}
+                    >
+                        <ModalOverlay />
+                        <ModalContent>
+                            <ModalHeader>Create your account</ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody pb={6}>
+                                <FormControl>
+                                    <FormLabel>First name</FormLabel>
+                                    <Input ref={initialRef} placeholder='First name' />
+                                </FormControl>
+
+                                <FormControl mt={4}>
+                                    <FormLabel>Last name</FormLabel>
+                                    <Input placeholder='Last name' />
+                                </FormControl>
+                            </ModalBody>
+
+                            <ModalFooter>
+                                <Button colorScheme='blue' mr={3}>
+                                    Save
+                                </Button>
+                                <Button onClick={onClose}>Cancel</Button>
+                            </ModalFooter>
+                        </ModalContent>
+                    </Modal>
+                </ButtonGroup>
+                <Spacer />
+                <Box paddingTop='35px'>Собственное производство<br />
+                    Телефон: +7 (999) 999-38-96<br />
+                    Почта: mebel.top.qa@gmail.com</Box>
+                <Spacer />
+            </Flex>
+            <Flex bg='#4E4A49' height='75PX' color="#fff" >
+                <Flex margin="auto" justifyContent='space-evenly' width='100%' >
+                    <Link _hover={{textDecoration:"none",opacity:'0.7'}}>КУХНИ</Link>
+                    <Link _hover={{textDecoration:"none", opacity:'0.7'}}>ШКАФЫ</Link>
+                    <Link _hover={{textDecoration:"none", opacity:'0.7'}}>ГАРДЕРОБНЫЕ</Link>
+                    <Link _hover={{textDecoration:"none", opacity:'0.7'}}>ПРИХОЖИЕ</Link>
+                </Flex>
+            </Flex>
         </Box>
     )
 }
