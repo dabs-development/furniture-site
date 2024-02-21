@@ -54,7 +54,7 @@ const Header = () => {
                 </Box>
                 <Spacer />
                 <ButtonGroup gap='2' paddingTop='65px' paddingLeft='18%'>
-                    <Button colorScheme='teal' onClick={onOpen}>РАСЧИТАТЬ ПРОЕКТ</Button>
+                    <Button colorScheme='teal' onClick={onOpen}>ОСТАВИТЬ ЗАЯВКУ</Button>
                     <Button colorScheme='teal'>НАПИСАТЬ В WHATSAPP</Button>
                     <Modal
                         initialFocusRef={initialRef}
@@ -106,3 +106,6 @@ const Header = () => {
 }
 
 export default Header
+
+
+                                    
