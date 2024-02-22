@@ -28,16 +28,17 @@ const Footer = () => {
 
 
     return (
-        <Box as="footer" bg='linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)' height='170px'>
-            <Flex margin="auto" justifyContent='space-evenly' width='100%' paddingTop={30}>
-                <Box>
-                    <StaticImage
+        <Box as="footer" bg='linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)' height='140px'>
+            <Flex margin="auto" justifyContent='space-evenly' width='100%' paddingTop={21}>
+                <Box marginLeft="2%">
+                    <StaticImage 
                         src="../images/fur.avif"
                         width={100}
                         quality={95}
                         style={{ backgroundSize: 'cover' }}
                     />
                 </Box>
+                <Spacer />
                 <Flex gap={5} paddingTop={5}>
                     <Link>
                     <StaticImage
@@ -64,16 +65,19 @@ const Footer = () => {
                     />
                     </Link>
                 </Flex>
+                <Spacer />
                 <Flex flexDirection="column">
                     <Text>+7 (999) 999-38-96</Text>
                     <Text>mebel.top.qa@gmail.com</Text>
                     <Text>Москва,пр-лавешкина. 45/4</Text>
                 </Flex>
+                <Spacer />
                 <Flex flexDirection="column">
                     <Text>ИП Иван Иванович Иванов</Text>
                     <Text>ИНН: 580315332567</Text>
                     <Text>ОГРНИП: 35345675044541</Text>
                 </Flex>
+                <Spacer />
             </Flex>
 
         </Box>

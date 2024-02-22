@@ -30,7 +30,12 @@ const Contacts = () => {
 
 
     return (
-        <Flex width='100%' padding={5} wrap={wrap}>
+        <Flex width='100%'
+            padding={5}
+            wrap={wrap}
+            backgroundImage="url('/src/images/kux.jpg)"
+            backgroundPosition="center"
+            backgroundRepeat="no-repeat"> 
             <Flex maxWidth="1000px" margin="auto" flexDirection='column'>
                 <Text fontSize={'6xl'} marginLeft={7}>Связаться с нами</Text>
                 <Wrap  >
