@@ -32,10 +32,10 @@ const Header = () => {
       <Box width="100%" display="flex" bg="#ffffff">
         <Tabs m="auto">
           <TabList>
-            <Tab fontSize="2xl">Акции</Tab>
-            <Tab fontSize="2xl">Примеры работ</Tab>
-            <Tab fontSize="2xl">Отзывы</Tab>
-            <Tab fontSize="2xl">Контакты</Tab>
+            <Tab>Акции</Tab>
+            <Tab>Примеры работ</Tab>
+            <Tab>Отзывы</Tab>
+            <Tab>Контакты</Tab>
           </TabList>
         </Tabs>
       </Box>
@@ -49,6 +49,7 @@ const Header = () => {
           />
         </Box>
         <Spacer />
+
         <ButtonGroup gap="2" paddingTop="65px" paddingLeft="18%">
           <Button colorScheme="teal" onClick={onOpen}>
             ОСТАВИТЬ ЗАЯВКУ
@@ -85,7 +86,9 @@ const Header = () => {
             </ModalContent>
           </Modal>
         </ButtonGroup>
+
         <Spacer />
+
         <Box paddingTop="35px">
           Собственное производство
           <br />
@@ -93,6 +96,7 @@ const Header = () => {
           <br />
           Почта: mebel.top.qa@gmail.com
         </Box>
+
         <Spacer />
       </Flex>
       <Flex bg="#4E4A49" height="75PX" color="#fff">
