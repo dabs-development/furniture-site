@@ -13,6 +13,11 @@ import Main from "./Main";
 import OrderModal from "./OrderModal";
 
 const theme = extendTheme({
+  breakpoints: {
+    sm: "320px",
+    md: "768px",
+    xl: "1200px",
+  },
   styles: {
     global: {
       "html, body": {
@@ -25,7 +30,6 @@ const theme = extendTheme({
 
 const App = () => {
   const { isOpen, onOpen, onClose } = useDisclosure({ id: "order-modal" });
-
   const initialRef = useRef(null);
   const finalRef = useRef(null);
 

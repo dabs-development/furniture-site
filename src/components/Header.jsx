@@ -14,17 +14,17 @@ import { tabs } from "../model/main";
 
 const Header = ({ openModal }) => {
   return (
-    <Box as="header" bg="linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)">
-      <Box width="100%" display="flex" bg="#ffffff">
-        <Tabs m="auto">
-          <TabList>
-            {tabs.map((tab, index) => (
-              <Tab key={`tab-${index}`}>{tab.name}</Tab>
-            ))}
-          </TabList>
-        </Tabs>
-      </Box>
-      <Flex>
+    <Box as="header">
+      <Tabs align="center">
+        <TabList>
+          {tabs.map((tab, index) => (
+            <Tab key={`tab-${index}`} fontWeight={500}>
+              {tab.name}
+            </Tab>
+          ))}
+        </TabList>
+      </Tabs>
+      <Flex bg="linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)">
         <Box paddingTop="15px" paddingBottom="15px" marginLeft="2%">
           <StaticImage
             src="../images/fur.avif"
