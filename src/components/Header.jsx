@@ -39,7 +39,11 @@ const Header = () => {
         </Box>
         <Spacer />
 
-        <ButtonGroup gap="2" paddingTop="65px" paddingLeft="18%">
+        <ButtonGroup
+          gap="2"
+          paddingTop="65px"
+          paddingLeft={["7px", "20px", "20px", "18%"]}
+        >
           <Button colorScheme="teal" onClick={onOpen}>
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
@@ -48,7 +52,7 @@ const Header = () => {
 
         <Spacer />
 
-        <Box paddingTop="35px">
+        <Box paddingTop="35px" fontSize={["sm", "sm", "sm", "lg"]}>
           Собственное производство
           <br />
           Телефон: +7 (999) 999-38-96

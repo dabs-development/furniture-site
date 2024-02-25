@@ -54,16 +54,18 @@ const Footer = () => (
         </Link>
       </Flex>
       <Spacer />
-      <Flex flexDirection="column">
-        <Text>+7 (999) 999-38-96</Text>
-        <Text>mebel.top.qa@gmail.com</Text>
-        <Text>Москва,пр-лавешкина. 45/4</Text>
+      <Flex flexDirection="column" paddingTop={5}>
+        <Text fontSize={["sm", "md", "lg", "xl"]}>+7 (999) 999-38-96</Text>
+        <Text fontSize={["sm", "md", "lg", "xl"]}>mebel.top.qa@gmail.com</Text>
+        <Text fontSize={["sm", "md", "lg", "xl"]}>
+          Москва,пр-лавешкина. 45/4
+        </Text>
       </Flex>
       <Spacer />
-      <Flex flexDirection="column">
-        <Text>ИП Иван Иванович Иванов</Text>
-        <Text>ИНН: 580315332567</Text>
-        <Text>ОГРНИП: 35345675044541</Text>
+      <Flex flexDirection="column" paddingTop={5}>
+        <Text fontSize={["sm", "md", "lg", "xl"]}>ИП Иван Иванович Иванов</Text>
+        <Text fontSize={["sm", "md", "lg", "xl"]}>ИНН: 580315332567</Text>
+        <Text fontSize={["sm", "md", "lg", "xl"]}>ОГРНИП: 35345675044541</Text>
       </Flex>
       <Spacer />
     </Flex>
