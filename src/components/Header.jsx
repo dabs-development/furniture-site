@@ -9,13 +9,10 @@ import {
   Button,
   Flex,
   Spacer,
-  useDisclosure,
 } from "@chakra-ui/react";
 import { tabs } from "../model/main";
 
-const Header = () => {
-  const { onOpen } = useDisclosure();
-
+const Header = ({ openModal }) => {
   return (
     <Box as="header" bg="linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)">
       <Box width="100%" display="flex" bg="#ffffff">
@@ -44,7 +41,7 @@ const Header = () => {
           paddingTop="65px"
           paddingLeft={["7px", "20px", "20px", "18%"]}
         >
-          <Button colorScheme="teal" onClick={onOpen}>
+          <Button colorScheme="teal" onClick={openModal}>
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
           <Button colorScheme="teal">НАПИСАТЬ В WHATSAPP</Button>
