@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Tabs, TabList, Tab, ButtonGroup, Button } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import { Flex, Spacer, Link } from "@chakra-ui/react";
+import { Wrap, WrapItem } from "@chakra-ui/react";
 import {
   Modal,
   ModalOverlay,
@@ -23,24 +24,24 @@ const Footer = () => {
     <Box
       as="footer"
       bg="linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)"
-      height="140px"
     >
-      <Flex
+      <Wrap
         margin="auto"
         justifyContent="space-evenly"
         width="100%"
-        paddingTop={21}
+        padding={21}
+        gap={10}
       >
-        <Box marginLeft="2%">
+        <WrapItem marginLeft="2%">
           <StaticImage
             src="../images/fur.avif"
             width={100}
             quality={95}
             style={{ backgroundSize: "cover" }}
           />
-        </Box>
+        </WrapItem>
         <Spacer />
-        <Flex gap={5} paddingTop={5}>
+        <WrapItem gap={5} paddingTop={5}>
           <Link>
             <StaticImage
               src="../images/what.png"
@@ -65,21 +66,21 @@ const Footer = () => {
               style={{ backgroundSize: "cover" }}
             />
           </Link>
+        </WrapItem>
+        <Spacer />
+        <Flex flexDirection="column" paddingTop={5}>
+          <Text fontSize={["sm", "md", "lg", "xl"]}>+7 (999) 999-38-96</Text>
+          <Text fontSize={["sm", "md", "lg", "xl"]}>mebel.top.qa@gmail.com</Text>
+          <Text fontSize={["sm", "md", "lg", "xl"]}>Москва,пр-лавешкина. 45/4</Text>
         </Flex>
         <Spacer />
-        <Flex flexDirection="column">
-          <Text>+7 (999) 999-38-96</Text>
-          <Text>mebel.top.qa@gmail.com</Text>
-          <Text>Москва,пр-лавешкина. 45/4</Text>
+        <Flex flexDirection="column" paddingTop={5}>
+          <Text fontSize={["sm", "md", "lg", "xl"]}>ИП Иван Иванович Иванов</Text>
+          <Text fontSize={["sm", "md", "lg", "xl"]}>ИНН: 580315332567</Text>
+          <Text fontSize={["sm", "md", "lg", "xl"]}>ОГРНИП: 35345675044541</Text>
         </Flex>
         <Spacer />
-        <Flex flexDirection="column">
-          <Text>ИП Иван Иванович Иванов</Text>
-          <Text>ИНН: 580315332567</Text>
-          <Text>ОГРНИП: 35345675044541</Text>
-        </Flex>
-        <Spacer />
-      </Flex>
+      </Wrap>
     </Box>
   );
 };
