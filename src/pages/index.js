@@ -4,6 +4,7 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contacts from "../components/Contacts";
+import Main from "../components/Main";
 
 const theme = extendTheme({
   styles: {
@@ -20,6 +21,7 @@ const IndexPage = () => {
   return (
     <ChakraProvider theme={theme}>
       <Header />
+      <Main />
       <Contacts />
       <Footer />
     </ChakraProvider>

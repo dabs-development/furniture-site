@@ -2,15 +2,19 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  siteMetadata: {
-    title: `furniture`,
-    siteUrl: `https://www.yourdomain.tld`,
-  },
   plugins: [
-    "gatsby-plugin-vanilla-extract",
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Furniture site",
+        short_name: "Furniture",
+        start_url: "/",
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: "standalone",
+        icon: "src/images/favicon.png",
+      },
+    },
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
@@ -27,5 +31,10 @@ module.exports = {
         portalZIndex: undefined,
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-vanilla-extract`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };

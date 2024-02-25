@@ -19,5 +19,9 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "react/function-component-definition": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/no-array-index-key": 0,
+  },
 };
