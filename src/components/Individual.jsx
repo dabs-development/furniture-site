@@ -21,11 +21,10 @@ const Individual = () => (
                 src={fit}
                 style={{ backgroundSize: "none" }}
             />
-
         </GridItem>
         <GridItem color="black" paddingLeft={5}>
-            <Text textAlign={{ lg: "start", md: "center" }} fontSize={{ sm: "1.5rem", md: "2rem", xl: "2.5rem" }}>Нужна мебель по индивидуальным размерам? Звоните 8(123) 456 7890</Text>
-            <Text textAlign={{ lg: "start", md: "center" }} fontSize={{ sm: "0.8rem", md: "1rem", xl: "1.5rem" }}>Наши специалисты проведут квалифицированную консультацию по всем имеющимся у Вас вопросам!</Text>
+            <Text textAlign={{ lg: "start", md: "center", }} fontSize={{ sm: "1.5rem", md: "2rem", xl: "2.5rem" }}>Нужна мебель по индивидуальным размерам? Звоните 8(123) 456 7890</Text>
+            <Text textAlign={{ lg: "start", md: "center", }} fontSize={{ sm: "0.8rem", md: "1rem", xl: "1.5rem" }}>Наши специалисты проведут квалифицированную консультацию по всем имеющимся у Вас вопросам!</Text>
         </GridItem>
     </Grid>
 
