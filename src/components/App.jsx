@@ -12,11 +12,13 @@ import Contacts from "./Contacts";
 import Main from "./Main";
 import OrderModal from "./OrderModal";
 import Nav from "./Nav";
+import Individual from "./Individual"
 
 const theme = extendTheme({
   breakpoints: {
     sm: "320px",
     md: "768px",
+    lg: "960px",
     xl: "1200px",
   },
   styles: {
@@ -48,6 +50,7 @@ const App = () => {
       <Header openModal={onOpen} />
       <Nav/>
       <Main />
+      <Individual/>
       <Contacts />
       <Footer />
     </ChakraProvider>
