@@ -7,12 +7,12 @@ const Contacts = () => (
   -23px 0 20px -23px rgba(0, 0, 0, .8),
   23px 0 20px -23px rgba(0, 0, 0, .8),
   0 0 40px rgba(0, 0, 0, .1) inset;" marginBottom={5}>
-    <Flex maxWidth="1000px" margin="auto" flexDirection="column">
-      <Text fontSize="4xl" marginLeft={7} color="#79B52D">
+    <Flex  margin="auto" flexDirection="column">
+      <Text fontSize="4xl" marginLeft={0} color="#79B52D">
         Связаться с нами
       </Text>
       <Wrap>
-        <WrapItem flexDirection="column" marginLeft={7}>
+        <WrapItem flexDirection="column" marginLeft={1}>
           <Text fontWeight="bold" fontSize="xl">
             В сети
           </Text>
@@ -20,7 +20,7 @@ const Contacts = () => (
           <Text fontSize="2xl">555-555-5555</Text>
           <Text fontSize="2xl">info@mailservice.com</Text>
         </WrapItem>
-        <WrapItem flexDirection="column" marginLeft={7}>
+        <WrapItem flexDirection="column" marginLeft={1}>
           <Text fontWeight="bold" fontSize="xl">
             Посетите нас
           </Text>
@@ -28,7 +28,7 @@ const Contacts = () => (
           <Text>Название улицы</Text>
           <Text>Почтовый индекс, Страна</Text>
         </WrapItem>
-        <WrapItem flexDirection="column" marginLeft={7}>
+        <WrapItem flexDirection="column" marginLeft={1}>
           <Text fontWeight="bold" fontSize="xl">
             Рабочие часы
           </Text>
