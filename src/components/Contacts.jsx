@@ -3,7 +3,7 @@ import { Box, Flex, Wrap, WrapItem, Text } from "@chakra-ui/react";
 import { wrap } from "framer-motion";
 
 const Contacts = () => (
-  <Flex width="100%" padding={5} wrap={wrap}>
+  <Flex width="100%" padding={5} wrap={wrap} bg='#f1f3f9'>
     <Flex maxWidth="1000px" margin="auto" flexDirection="column">
       <Text fontSize="4xl" marginLeft={7}>
         Связаться с нами
