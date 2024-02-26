@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import Contacts from "./Contacts";
 import Main from "./Main";
 import OrderModal from "./OrderModal";
+import Nav from "./Nav";
 
 const theme = extendTheme({
   breakpoints: {
@@ -45,6 +46,7 @@ const App = () => {
         <OrderModal initialRef={initialRef} />
       </Modal>
       <Header openModal={onOpen} />
+      <Nav/>
       <Main />
       <Contacts />
       <Footer />

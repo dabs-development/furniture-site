@@ -60,6 +60,7 @@ const Header = ({ openModal }) => {
             src={Logo}
             borderRadius={{ sm: "full", md: "unset" }}
             alt="Logo"
+            padding={5}
           />
         </GridItem>
 
@@ -80,7 +81,7 @@ const Header = ({ openModal }) => {
           area="contacts"
           textAlign={{ sm: "center", xl: "end" }}
           alignSelf="center"
-          paddingRight={{ md: "1rem" }}
+          padding={{ md: "1rem",sm: '1rem' }}
         >
           Собственное производство
           <br />
