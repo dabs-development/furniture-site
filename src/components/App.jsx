@@ -14,6 +14,7 @@ import OrderModal from "./OrderModal";
 import Nav from "./Nav";
 import Individual from "./Individual"
 import Examples from "./Examples"
+import Stages from "./Stages"
 
 const theme = extendTheme({
   breakpoints: {
@@ -53,6 +54,7 @@ const App = () => {
       <Main />
       <Individual/>
       <Examples/>
+      <Stages/>
       <Contacts />
       <Footer />
     </ChakraProvider>
