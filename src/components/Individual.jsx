@@ -10,7 +10,7 @@ import fit from "../images/fit.jpeg";
 
 const Individual = () => (
 
-    <Grid bg='#f1f3f9' color="#fff" gridTemplateColumns={{ xl: '1fr 2fr', lg: '1fr 2fr', md: '1fr' }} width='90%' margin="auto" padding={5} marginTop={-8} zIndex={10} boxShadow="0 1px 4px rgba(0, 0, 0, .3),
+    <Grid bg='#f1f3f9' color="#fff" gridTemplateColumns={{ xl: '1fr 2fr', lg: '1fr 2fr', md: '1fr' }} width='90%' margin="auto" padding={5} marginTop={8} zIndex={10} boxShadow="0 1px 4px rgba(0, 0, 0, .3),
     -23px 0 20px -23px rgba(0, 0, 0, .8),
     23px 0 20px -23px rgba(0, 0, 0, .8),
     0 0 40px rgba(0, 0, 0, .1) inset;" marginBottom={5}>

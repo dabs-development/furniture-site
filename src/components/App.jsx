@@ -15,6 +15,7 @@ import Nav from "./Nav";
 import Individual from "./Individual"
 import Examples from "./Examples"
 import Stages from "./Stages"
+import Lan from "./Lan"
 
 const theme = extendTheme({
   breakpoints: {
@@ -52,6 +53,7 @@ const App = () => {
       <Header openModal={onOpen} />
       <Nav/>
       <Main />
+      <Lan openModal={onOpen} />
       <Individual/>
       <Examples/>
       <Stages/>
