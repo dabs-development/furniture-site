@@ -128,7 +128,7 @@ small {
 
 sub,
 sup {
-  color: #d6ccca;
+  color: rgb(233, 219, 217)
   font-size: 75%;
   line-height: 0;
   position: relative;

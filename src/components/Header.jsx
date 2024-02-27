@@ -10,7 +10,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { tabs } from "../model/main";
-import Logo from "../images/fur.avif";
+import Logo from "../images/logo.png";
 
 const Header = ({ openModal }) => {
   return (
@@ -57,11 +57,11 @@ const Header = ({ openModal }) => {
           justifySelf={{ sm: "center", md: "start" }}
         >
           <Image
-            boxSize="150px"
+            boxSize="170px"
             src={Logo}
             borderRadius={{ sm: "full", md: "unset" }}
             alt="Logo"
-            padding={5}
+            padding={0}
           />
         </GridItem>
 

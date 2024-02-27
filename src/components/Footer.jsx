@@ -5,9 +5,9 @@ import { Text, Link, Box, Flex, Spacer,Wrap,WrapItem } from "@chakra-ui/react";
 
 const Footer = () => (
   <Box
-  color="#fff"
+  color="black"
     as="footer"
-    bg="#333"
+    bg="rgb(233, 219, 217)"
   >
     <Wrap
       margin="auto"
@@ -17,9 +17,9 @@ const Footer = () => (
     >
       <Box marginLeft="2%">
         <StaticImage
-          src="../images/fur.avif"
+          src="../images/logo.png"
           alt="img"
-          width={100}
+          width={150}
           quality={95}
           style={{ backgroundSize: "cover" }}
         />
