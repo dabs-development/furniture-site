@@ -5,8 +5,9 @@ import { Text, Link, Box, Flex, Spacer,Wrap,WrapItem } from "@chakra-ui/react";
 
 const Footer = () => (
   <Box
+  color="#fff"
     as="footer"
-    bg="linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)"
+    bg="#333"
   >
     <Wrap
       margin="auto"

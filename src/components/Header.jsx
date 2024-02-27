@@ -26,7 +26,8 @@ const Header = ({ openModal }) => {
       </Tabs>
 
       <Grid
-        bg="linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db)"
+        bg="#fff"
+        boxShadow="0 0 10px 5px rgba(221, 221, 221, 1)"
         templateAreas={{
           sm: `'logo'
                 'btns'
@@ -71,10 +72,10 @@ const Header = ({ openModal }) => {
           alignSelf="center"
           justifyContent="center"
         >
-          <Button colorScheme="teal" onClick={openModal}>
+          <Button bg="#79B52D" colorScheme="teal" onClick={openModal}>
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
-          <Button colorScheme="teal">НАПИСАТЬ В WHATSAPP</Button>
+          <Button bg="#79B52D" colorScheme="teal">НАПИСАТЬ В WHATSAPP</Button>
         </GridItem>
 
         <GridItem
