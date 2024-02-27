@@ -75,7 +75,7 @@ const Header = ({ openModal }) => {
           <Button bg="#79B52D" colorScheme="teal" onClick={openModal}>
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
-          <Button bg="#79B52D" colorScheme="teal">НАПИСАТЬ В WHATSAPP</Button>
+          <Button bg="#79B52D" colorScheme="teal"> WHATSAPP</Button>
         </GridItem>
 
         <GridItem
