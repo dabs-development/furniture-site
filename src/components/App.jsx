@@ -17,6 +17,7 @@ import Examples from "./Examples"
 import Stages from "./Stages"
 import Lan from "./Lan"
 import Advantages from "./Advantages"
+import Stock from "./Stock";
 
 const theme = extendTheme({
   breakpoints: {
@@ -55,9 +56,10 @@ const App = () => {
       <Nav/>
       <Main />
       <Lan openModal={onOpen} />
-      <Advantages/>
-      <Individual/>
       <Examples/>
+      <Advantages/>
+      <Stock openModal={onOpen}/>
+      <Individual/>
       <Stages/>
       <Contacts />
       <Footer />
