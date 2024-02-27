@@ -19,7 +19,7 @@ const Footer = () => (
         <StaticImage
           src="../images/logo.png"
           alt="img"
-          width={150}
+          width={100}
           quality={95}
           style={{ backgroundSize: "cover" }}
         />

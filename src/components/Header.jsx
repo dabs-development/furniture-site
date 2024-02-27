@@ -57,11 +57,10 @@ const Header = ({ openModal }) => {
           justifySelf={{ sm: "center", md: "start" }}
         >
           <Image
-            boxSize="170px"
+            boxSize="130px"
             src={Logo}
-            borderRadius={{ sm: "full", md: "unset" }}
             alt="Logo"
-            padding={0}
+            padding={5}
           />
         </GridItem>
 
