@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
+import Carousel from "react-slick";
 import { Box, Flex } from "@chakra-ui/react";
 
 import "slick-carousel/slick/slick.css";
@@ -19,7 +19,7 @@ const settings = {
 const Reviews = () => {
   return (
     <Box height="34rem" width="100%">
-      <Slider {...settings}>
+      <Carousel {...settings}>
         <Flex
           padding="0 5rem"
           fontSize="20rem"
@@ -70,7 +70,7 @@ const Reviews = () => {
         >
           5
         </Flex>
-      </Slider>
+      </Carousel>
     </Box>
   );
 };
