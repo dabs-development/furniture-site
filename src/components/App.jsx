@@ -9,14 +9,14 @@ import {
 import Header from "./Header";
 import Footer from "./Footer";
 import Contacts from "./Contacts";
-import Main from "./Main";
+import Reviews from "./Reviews";
 import OrderModal from "./OrderModal";
 import Nav from "./Nav";
-import Individual from "./Individual"
-import Examples from "./Examples"
-import Stages from "./Stages"
-import Lan from "./Lan"
-import Advantages from "./Advantages"
+import Individual from "./Individual";
+import Examples from "./Examples";
+import Stages from "./Stages";
+import Lan from "./Lan";
+import Advantages from "./Advantages";
 import Stock from "./Stock";
 
 const theme = extendTheme({
@@ -53,14 +53,14 @@ const App = () => {
         <OrderModal initialRef={initialRef} />
       </Modal>
       <Header openModal={onOpen} />
-      <Nav/>
-      <Main />
+      <Nav />
+      <Reviews />
       <Lan openModal={onOpen} />
-      <Examples/>
-      <Advantages/>
-      <Stock openModal={onOpen}/>
-      <Individual/>
-      <Stages/>
+      <Examples />
+      <Advantages />
+      <Stock openModal={onOpen} />
+      <Individual />
+      <Stages />
       <Contacts />
       <Footer />
     </ChakraProvider>

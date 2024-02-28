@@ -1,7 +1,4 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-module.exports = {
+const config = {
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
@@ -36,5 +33,8 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sass`,
   ],
 };
+
+export default config;

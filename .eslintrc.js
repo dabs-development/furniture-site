@@ -27,5 +27,8 @@ module.exports = {
     "no-console": 0,
     "no-unused-vars": "warn",
     "react/prop-types": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/jsx-boolean-value": 0,
+    "react/jsx-props-no-spreading": 0,
   },
 };
