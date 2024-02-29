@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Text, Link, Box, Flex, Spacer,Wrap,WrapItem } from "@chakra-ui/react";
+import { Text, Link, Box, Flex, Spacer,Wrap,WrapItem,Image } from "@chakra-ui/react";
 import Logo from "../images/logo.png";
 
 const Footer = () => (
@@ -16,8 +16,8 @@ const Footer = () => (
       padding={21}
     >
       <Box marginLeft="2%">
-        <StaticImage
-          src="../images/logo.png"
+        <Image
+          src={Logo}
           alt="img"
           width={100}
           quality={95}
