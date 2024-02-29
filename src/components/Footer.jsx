@@ -1,7 +1,12 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Text, Link, Box, Flex, Spacer,Wrap,WrapItem,Image } from "@chakra-ui/react";
+
 import Logo from "../images/logo.png";
+import what from "../images/what.png";
+import vk from "../images/vk.png";
+import inst from "../images/inst.png";
+
 
 const Footer = () => (
   <Box
@@ -27,8 +32,8 @@ const Footer = () => (
       <Spacer />
       <Flex gap={5} paddingTop={5}>
         <Link>
-          <StaticImage
-            src="../images/what.png"
+          <Image
+            src={what}
             alt="img"
             width={65}
             quality={95}
@@ -36,8 +41,8 @@ const Footer = () => (
           />
         </Link>
         <Link>
-          <StaticImage
-            src="../images/vk.png"
+          <Image
+            src={vk}
             alt="img"
             width={43}
             quality={95}
@@ -45,8 +50,8 @@ const Footer = () => (
           />
         </Link>
         <Link marginLeft={3}>
-          <StaticImage
-            src="../images/inst.png"
+          <Image
+            src={inst}
             alt="img"
             width={43}
             quality={95}
