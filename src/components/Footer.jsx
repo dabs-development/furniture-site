@@ -17,7 +17,7 @@ const Footer = () => (
     >
       <Box marginLeft="2%">
         <StaticImage
-      src={Logo}
+          src="../images/logo.png"
           alt="img"
           width={100}
           quality={95}
