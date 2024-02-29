@@ -33,8 +33,6 @@ const Examples = () =>
             <Link display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>
                 <Box>
                     <Image src={gar} borderRadius="15px" />
-
-
                 </Box>
                 <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Гардеробные</Text>
                 <Text paddingTop={2} fontWeight="bold">от 25 000 р</Text>
