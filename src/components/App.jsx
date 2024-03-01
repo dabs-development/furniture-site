@@ -56,7 +56,7 @@ const App = () => {
       </Modal>
       <Header openModal={onOpen} />
       <Nav />
-      <Reviews />
+      <Reviews  openModal={onOpen}/>
       <Lan openModal={onOpen} />
       <Examples />
       <Advantages />
