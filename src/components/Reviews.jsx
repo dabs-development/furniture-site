@@ -5,6 +5,9 @@ import { Box, Flex } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import fon from "../images/fon1.jpg";
+import fonn from "../images/fon2.jpeg";
+
 const settings = {
   dots: true,
   infinite: true,
@@ -21,54 +24,27 @@ const Reviews = () => {
     <Box height="34rem" width="100%">
       <Carousel {...settings}>
         <Flex
-          padding="0 5rem"
+          
           fontSize="20rem"
           color="#fff"
           height="32rem"
           width="100%"
-          bgColor="#ffcccc"
+          backgroundImage={fon}
         >
-          1
+          <Flex width="100%" bg="#000" height="32rem" opacity="0.6">
+
+          </Flex>
         </Flex>
         <Flex
-          padding="0 5rem"
           fontSize="20rem"
           color="#fff"
           height="32rem"
           width="100%"
-          bgColor="#e0b8c2"
+          backgroundImage={fonn}
         >
-          2
-        </Flex>
-        <Flex
-          padding="0 5rem"
-          fontSize="20rem"
-          color="#fff"
-          height="32rem"
-          width="100%"
-          bgColor="#ba9eb5"
-        >
-          3
-        </Flex>
-        <Flex
-          padding="0 5rem"
-          fontSize="20rem"
-          color="#fff"
-          height="32rem"
-          width="100%"
-          bgColor="#8c80a6"
-        >
-          4
-        </Flex>
-        <Flex
-          padding="0 5rem"
-          fontSize="20rem"
-          color="#fff"
-          height="32rem"
-          width="100%"
-          bgColor="#666699"
-        >
-          5
+         <Flex width="100%" bg="#000" height="32rem" opacity="0.6">
+            
+          </Flex>
         </Flex>
       </Carousel>
     </Box>
