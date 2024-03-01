@@ -7,7 +7,7 @@ import warehouse from "../images/warehouse.png";
 
 const Buyer = () =>
 
-    <Flex flexDirection="column" bg="#f1f3f9" marginBottom={5}>
+    <Flex flexDirection="column" bg="#f1f3f9" marginBottom={5} paddingBottom={5}>
         <Text margin="auto" marginTop={5} fontSize="2rem" fontWeight="bold" color="#79B52D">ПОКУПАТЕЛЮ</Text>
         <Grid margin="auto" gap={5}  gridTemplateColumns={{ xl: '1fr 1fr 1fr', lg: '1fr 1fr 1fr', md: '1fr 1fr', sm: "1fr" }}>
         <GridItem  >
