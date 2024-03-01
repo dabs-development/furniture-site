@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { Formik } from "formik";
 import {
   ChakraProvider,
   extendTheme,
@@ -19,7 +20,6 @@ import Lan from "./Lan";
 import Advantages from "./Advantages";
 import Stock from "./Stock";
 import Buyer from "./Buyer";
-
 
 const theme = extendTheme({
   breakpoints: {
@@ -43,29 +43,61 @@ const App = () => {
   const initialRef = useRef(null);
   const finalRef = useRef(null);
 
+  const [page, setPage] = useState(0);
+
+  const hanldeSubmit = (values) => {
+    if (page === 1) {
+      // do smth
+      console.log(values);
+      onClose();
+
+      return;
+    }
+
+    setPage((currentPage) => currentPage + 1);
+  };
+
+  const initialValues = {
+    name: "",
+    phone: "",
+    size: "7 см",
+  };
+
   return (
     <ChakraProvider theme={theme}>
-      <Modal
-        initialFocusRef={initialRef}
-        finalFocusRef={finalRef}
-        isOpen={isOpen}
-        onClose={onClose}
-      >
-        <ModalOverlay />
-        <OrderModal initialRef={initialRef} />
-      </Modal>
-      <Header openModal={onOpen} />
-      <Nav />
-      <Reviews  openModal={onOpen}/>
-      <Lan openModal={onOpen} />
-      <Examples />
-      <Advantages />
-      <Stock openModal={onOpen} />
-      <Individual />
-      <Stages />
-      <Buyer/>
-      <Contacts />
-      <Footer />
+      <Formik initialValues={initialValues} onSubmit={hanldeSubmit}>
+        {(props) => (
+          <>
+            <Modal
+              initialFocusRef={initialRef}
+              finalFocusRef={finalRef}
+              isOpen={isOpen}
+              onClose={onClose}
+            >
+              <ModalOverlay />
+              <OrderModal
+                page={page}
+                values={props.values}
+                onSubmit={props.handleSubmit}
+                initialRef={initialRef}
+                closeModal={onClose}
+              />
+            </Modal>
+            <Header openModal={onOpen} />
+            <Nav />
+            <Reviews openModal={onOpen} />
+            <Lan openModal={onOpen} />
+            <Examples />
+            <Advantages />
+            <Stock openModal={onOpen} />
+            <Individual />
+            <Stages />
+            <Buyer />
+            <Contacts />
+            <Footer />
+          </>
+        )}
+      </Formik>
     </ChakraProvider>
   );
 };

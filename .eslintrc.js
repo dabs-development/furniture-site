@@ -30,5 +30,6 @@ module.exports = {
     "import/no-extraneous-dependencies": 0,
     "react/jsx-boolean-value": 0,
     "react/jsx-props-no-spreading": 0,
+    "no-alert": 0,
   },
 };

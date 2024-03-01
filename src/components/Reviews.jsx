@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-slick";
 import { Box, Flex, Text, Button } from "@chakra-ui/react";
 
@@ -16,7 +16,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 5000, // milliseconds
   waitForAnimate: false,
 };
 
