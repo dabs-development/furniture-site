@@ -18,6 +18,8 @@ import Stages from "./Stages";
 import Lan from "./Lan";
 import Advantages from "./Advantages";
 import Stock from "./Stock";
+import Buyer from "./Buyer";
+
 
 const theme = extendTheme({
   breakpoints: {
@@ -61,6 +63,7 @@ const App = () => {
       <Stock openModal={onOpen} />
       <Individual />
       <Stages />
+      <Buyer/>
       <Contacts />
       <Footer />
     </ChakraProvider>
