@@ -13,6 +13,7 @@ const Footer = () => (
   color="black"
     as="footer"
     bg="rgb(233, 219, 217)"
+    marginBottom={{ xl: '80px', lg: '80px', md: '80px', sm: "80px" }}
   >
     <Wrap
       margin="auto"

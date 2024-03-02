@@ -16,7 +16,7 @@ const Header = ({ openModal }) => {
   return (
     <Box as="header">
       <Tabs align="center">
-        <TabList>
+        <TabList width="100%">
           {tabs.map((tab, index) => (
             <Tab key={`tab-${index}`} fontWeight={500}>
               {tab.name}

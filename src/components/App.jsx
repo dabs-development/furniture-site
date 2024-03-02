@@ -43,7 +43,22 @@ const App = () => {
   const initialRef = useRef(null);
   const finalRef = useRef(null);
 
+  const [isvisible, setIsvisible] = React.useState('');
+
   const [page, setPage] = useState(0);
+
+  window.addEventListener('scroll', () => {
+
+    const windowRelativeBottom = document.documentElement.getBoundingClientRect().top;
+    if(windowRelativeBottom < -440){
+      setIsvisible("visible") 
+    } else{
+      setIsvisible("hidden") 
+    }
+  });
+
+
+
 
   const hanldeSubmit = (values) => {
     if (page === 1) {
@@ -84,7 +99,7 @@ const App = () => {
               />
             </Modal>
             <Header openModal={onOpen} />
-            <Nav />
+            <Nav display="flex" position="static" width="100%" bottom="0px" isvisible='isvisible'/>
             <Reviews openModal={onOpen} />
             <Lan openModal={onOpen} />
             <Examples />
@@ -95,6 +110,7 @@ const App = () => {
             <Buyer />
             <Contacts />
             <Footer />
+            <Nav display="flex" position="fixed" width="100%" bottom="0px" isvisible={isvisible}/>
           </>
         )}
       </Formik>
