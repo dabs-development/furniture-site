@@ -45,7 +45,7 @@ const App = () => {
   const initialRef = useRef(null);
   const finalRef = useRef(null);
 
-  const [isvisible, setIsvisible] = React.useState('');
+  const [isvisible, setIsvisible] = React.useState('hidden');
 
   const [page, setPage] = useState(0);
 
