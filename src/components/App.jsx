@@ -20,6 +20,7 @@ import Lan from "./Lan";
 import Advantages from "./Advantages";
 import Stock from "./Stock";
 import Buyer from "./Buyer";
+import Scrollbutton from "./Scrollbutton";
 
 const theme = extendTheme({
   breakpoints: {
@@ -46,6 +47,17 @@ const App = () => {
   const [isvisible, setIsvisible] = React.useState('');
 
   const [page, setPage] = useState(0);
+
+
+  const scrollButton = () => {
+    let t; let s;
+    s = document.body.scrollTop || window.pageYOffset;
+    // eslint-disable-next-line prefer-const
+    t = setInterval(() => {
+      if (s > 0) window.scroll(0, (s -= 10));
+      else clearInterval(t);
+    }, 1);
+  };
 
   window.addEventListener('scroll', () => {
 
@@ -98,6 +110,7 @@ const App = () => {
                 closeModal={onClose}
               />
             </Modal>
+            <Scrollbutton isvisible={isvisible} onClick={scrollButton}/>
             <Header openModal={onOpen} />
             <Nav display="flex" position="static" width="100%" bottom="0px" isvisible='isvisible'/>
             <Reviews openModal={onOpen} />
