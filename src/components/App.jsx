@@ -62,14 +62,21 @@ const App = () => {
   window.addEventListener('scroll', () => {
 
     const windowRelativeBottom = document.documentElement.getBoundingClientRect().top;
-    if(windowRelativeBottom < -440){
-      setIsvisible("visible") 
-    } else{
-      setIsvisible("hidden") 
+    if (windowRelativeBottom < -440) {
+      setIsvisible("visible")
+    } else {
+      setIsvisible("hidden")
     }
   });
 
-
+  React.useEffect(() => {
+    const windowRelativeBottom = document.documentElement.getBoundingClientRect().top;
+    if (windowRelativeBottom < -440) {
+      setIsvisible("visible")
+    } else {
+      setIsvisible("hidden")
+    }
+  }, []);
 
 
   const hanldeSubmit = (values) => {
@@ -110,9 +117,9 @@ const App = () => {
                 closeModal={onClose}
               />
             </Modal>
-            <Scrollbutton isvisible={isvisible} onClick={scrollButton}/>
-            <Header openModal={onOpen} />
-            <Nav display="flex" position="static" width="100%" bottom="0px" isvisible='isvisible'/>
+            <Scrollbutton isvisible={isvisible} onClick={scrollButton} />
+            <Header openModal={onOpen} isvisible={isvisible} />
+            <Nav display="flex" position="static" width="100%" bottom="0px" isvisible='isvisible' />
             <Reviews openModal={onOpen} />
             <Lan openModal={onOpen} />
             <Examples />
@@ -123,7 +130,7 @@ const App = () => {
             <Buyer />
             <Contacts />
             <Footer />
-            <Nav display="flex" position="fixed" width="100%" bottom="0px" isvisible={isvisible}/>
+            <Nav display="flex" position="fixed" width="100%" bottom="0px" isvisible={isvisible} />
           </>
         )}
       </Formik>
