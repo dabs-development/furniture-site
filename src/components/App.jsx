@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { useRef, useState } from "react";
 import { Formik } from "formik";
 import {
@@ -51,7 +52,8 @@ const App = () => {
 
   const scrollButton = () => {
     let t; let s;
-    s = document.body.scrollTop || window.pageYOffset;
+  
+    s = document.body.scrollTop || scrollY;
     // eslint-disable-next-line prefer-const
     t = setInterval(() => {
       if (s > 0) window.scroll(0, (s -= 20));
