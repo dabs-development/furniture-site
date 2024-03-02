@@ -54,7 +54,7 @@ const App = () => {
     s = document.body.scrollTop || window.pageYOffset;
     // eslint-disable-next-line prefer-const
     t = setInterval(() => {
-      if (s > 0) window.scroll(0, (s -= 10));
+      if (s > 0) window.scroll(0, (s -= 20));
       else clearInterval(t);
     }, 1);
   };
