@@ -52,7 +52,7 @@ const App = () => {
 
   const scrollButton = () => {
     let t; let s;
-  
+
     s = document.body.scrollTop || scrollY;
     // eslint-disable-next-line prefer-const
     t = setInterval(() => {
@@ -61,23 +61,21 @@ const App = () => {
     }, 1);
   };
 
-  window.addEventListener('scroll', () => {
 
+
+  const scroll = () => {
     const windowRelativeBottom = document.documentElement.getBoundingClientRect().top;
     if (windowRelativeBottom < -440) {
       setIsvisible("visible")
     } else {
       setIsvisible("hidden")
     }
-  });
+  }
 
   React.useEffect(() => {
-    const windowRelativeBottom = document.documentElement.getBoundingClientRect().top;
-    if (windowRelativeBottom < -440) {
-      setIsvisible("visible")
-    } else {
-      setIsvisible("hidden")
-    }
+    window.addEventListener('scroll', () => {
+      scroll()
+    });
   }, []);
 
 
