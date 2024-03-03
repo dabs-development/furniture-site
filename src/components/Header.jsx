@@ -1,23 +1,16 @@
-import * as React from "react";
-import {
-  Box,
-  Tabs,
-  TabList,
-  Tab,
-  Button,
-  Grid,
-  GridItem,
-  Image,
-} from "@chakra-ui/react";
-import { tabs } from "../model/main";
-import Logo from "../images/logo.png";
+import React, { useContext } from "react";
+import { Box, Button, Grid, GridItem, Image } from "@chakra-ui/react";
 
-const Header = ({ openModal}) => {
+import Logo from "../images/logo.png";
+import HeaderTabs from "./HeaderTabs";
+import AppContext from "../context";
+
+const Header = ({ openModal, location }) => {
+  const context = useContext(AppContext);
 
   return (
     <Box as="header">
-      
-
+      <HeaderTabs visibleClass={context.visibleClass} />
       <Grid
         bg="#fff"
         boxShadow="0 0 10px 5px rgba(221, 221, 221, 1)"
@@ -49,12 +42,7 @@ const Header = ({ openModal}) => {
           mt={{ sm: "1rem", md: 0 }}
           justifySelf={{ sm: "center", md: "start" }}
         >
-          <Image
-            boxSize="130px"
-            src={Logo}
-            alt="Logo"
-            padding={5}
-          />
+          <Image boxSize="130px" src={Logo} alt="Logo" padding={5} />
         </GridItem>
 
         <GridItem
@@ -67,14 +55,17 @@ const Header = ({ openModal}) => {
           <Button bg="#79B52D" colorScheme="teal" onClick={openModal}>
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
-          <Button bg="#79B52D" colorScheme="teal"> WHATSAPP</Button>
+          <Button bg="#79B52D" colorScheme="teal">
+            {" "}
+            WHATSAPP
+          </Button>
         </GridItem>
 
         <GridItem
           area="contacts"
           textAlign={{ sm: "center", xl: "end" }}
           alignSelf="center"
-          padding={{ md: "1rem", sm: '1rem' }}
+          padding={{ md: "1rem", sm: "1rem" }}
         >
           Собственное производство
           <br />

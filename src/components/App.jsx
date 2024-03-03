@@ -1,20 +1,7 @@
-/* eslint-disable no-restricted-globals */
-import React, { useRef, useState } from "react";
-import { Formik } from "formik";
-import {
-  ChakraProvider,
-  extendTheme,
-  Modal,
-  ModalOverlay,
-  useDisclosure,
-} from "@chakra-ui/react";
+import React, { useContext } from "react";
 
-import Header from "./Header";
-import Footer from "./Footer";
 import Contacts from "./Contacts";
 import Reviews from "./Reviews";
-import OrderModal from "./OrderModal";
-import Nav from "./Nav";
 import Individual from "./Individual";
 import Examples from "./Examples";
 import Stages from "./Stages";
@@ -22,42 +9,19 @@ import Lan from "./Lan";
 import Advantages from "./Advantages";
 import Stock from "./Stock";
 import Buyer from "./Buyer";
-import Scrollbutton from "./Scrollbutton";
-import Tabs from "./Tabs";
-import Category from "./Category";
 
-const theme = extendTheme({
-  breakpoints: {
-    sm: "320px",
-    md: "768px",
-    lg: "960px",
-    xl: "1200px",
-  },
-  styles: {
-    global: {
-      "html, body": {
-        fontSize: "16px",
-        fontFamily: "Inter Variable",
-      },
-    },
-  },
-});
+import AppContext from "../context";
 
 const App = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure({ id: "order-modal" });
-
-
-
-  const [isvisible, setIsvisible] = React.useState('hidden');
+  const context = useContext(AppContext);
 
   return (
     <>
-      <Tabs isvisible={isvisible} />
-      <Reviews openModal={onOpen} />
-      <Lan openModal={onOpen} />
+      <Reviews openModal={context.onOpen} />
+      <Lan openModal={context.onOpen} />
       <Examples />
       <Advantages />
-      <Stock openModal={onOpen} />
+      <Stock openModal={context.onOpen} />
       <Individual />
       <Stages />
       <Buyer />
