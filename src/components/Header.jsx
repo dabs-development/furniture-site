@@ -12,31 +12,11 @@ import {
 import { tabs } from "../model/main";
 import Logo from "../images/logo.png";
 
-const Header = ({ openModal, isvisible }) => {
-
-  const [fixed, setIsfixed] = React.useState('static');
-
-  React.useEffect(() => {
-    if (isvisible === "visible") {
-      setIsfixed("fixed")
-    } else {
-      setIsfixed("static")
-    }
-  }, [isvisible]);
-
-
+const Header = ({ openModal}) => {
 
   return (
     <Box as="header">
-      <Tabs align="center" position={fixed} width="100%" bg="#fff" zIndex={156465}>
-        <TabList width="100%">
-          {tabs.map((tab, index) => (
-            <Tab key={`tab-${index}`} fontWeight={500}>
-              {tab.name}
-            </Tab>
-          ))}
-        </TabList>
-      </Tabs>
+      
 
       <Grid
         bg="#fff"

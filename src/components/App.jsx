@@ -22,6 +22,8 @@ import Advantages from "./Advantages";
 import Stock from "./Stock";
 import Buyer from "./Buyer";
 import Scrollbutton from "./Scrollbutton";
+import Tabs from "./Tabs";
+import Category from "./Category";
 
 const theme = extendTheme({
   breakpoints: {
@@ -118,7 +120,8 @@ const App = () => {
               />
             </Modal>
             <Scrollbutton isvisible={isvisible} onClick={scrollButton} />
-            <Header openModal={onOpen} isvisible={isvisible} />
+            <Tabs isvisible={isvisible}/>
+            <Header openModal={onOpen}/>
             <Nav display="flex" position="static" width="100%" bottom="0px" isvisible='isvisible' />
             <Reviews openModal={onOpen} />
             <Lan openModal={onOpen} />
@@ -127,7 +130,7 @@ const App = () => {
             <Stock openModal={onOpen} />
             <Individual />
             <Stages />
-            <Buyer />
+            <Buyer/>
             <Contacts />
             <Footer />
             <Nav display="flex" position="fixed" width="100%" bottom="0px" isvisible={isvisible} />
