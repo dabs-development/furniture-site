@@ -1,7 +1,9 @@
 import * as React from "react";
 import { Text, Flex, Link } from "@chakra-ui/react";
 
-const Category = ({ location, openModal }) => {
+const Category = ({  openModal }) => {
+
+
   return (
     <Flex
       bg="fff"

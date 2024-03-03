@@ -5,7 +5,7 @@ import Logo from "../images/logo.png";
 import HeaderTabs from "./HeaderTabs";
 import AppContext from "../context";
 
-const Header = ({ openModal, location }) => {
+const Header = ({ openModal}) => {
   const context = useContext(AppContext);
 
   return (
@@ -66,7 +66,7 @@ const Header = ({ openModal, location }) => {
           textAlign={{ sm: "center", xl: "end" }}
           alignSelf="center"
           padding={{ md: "1rem", sm: "1rem" }}
-          minWidth="237px"
+          minWidth="275px"
         >
           Собственное производство
           <br />
