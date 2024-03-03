@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 
 const IndexPage = ({location}) => {
 
-    const [dispaly, setDisplay] = React.useState("none");
+    const [dispaly, setDisplay] = React.useState("content");
 
     React.useEffect(() => {
       console.log(dispaly)
