@@ -9,7 +9,7 @@ const Header = ({ openModal, location }) => {
   const context = useContext(AppContext);
 
   return (
-    <Box as="header">
+    <Box as="header" >
       <HeaderTabs visibleClass={context.visibleClass} />
       <Grid
         bg="#fff"
@@ -61,11 +61,12 @@ const Header = ({ openModal, location }) => {
           </Button>
         </GridItem>
 
-        <GridItem
+        <GridItem fontSize={{sm: "sm", md: "sm", xl: "md"} }
           area="contacts"
           textAlign={{ sm: "center", xl: "end" }}
           alignSelf="center"
           padding={{ md: "1rem", sm: "1rem" }}
+          minWidth="237px"
         >
           Собственное производство
           <br />
