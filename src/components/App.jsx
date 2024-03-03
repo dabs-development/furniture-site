@@ -8,6 +8,7 @@ import {
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
+
 import Header from "./Header";
 import Footer from "./Footer";
 import Contacts from "./Contacts";
@@ -44,100 +45,24 @@ const theme = extendTheme({
 
 const App = () => {
   const { isOpen, onOpen, onClose } = useDisclosure({ id: "order-modal" });
-  const initialRef = useRef(null);
-  const finalRef = useRef(null);
+
+
 
   const [isvisible, setIsvisible] = React.useState('hidden');
 
-  const [page, setPage] = useState(0);
-
-
-  const scrollButton = () => {
-    let t; let s;
-
-    s = document.body.scrollTop || scrollY;
-    // eslint-disable-next-line prefer-const
-    t = setInterval(() => {
-      if (s > 0) window.scroll(0, (s -= 20));
-      else clearInterval(t);
-    }, 1);
-  };
-
-
-
-  const scroll = () => {
-    const windowRelativeBottom = document.documentElement.getBoundingClientRect().top;
-    if (windowRelativeBottom < -440) {
-      setIsvisible("visible")
-    } else {
-      setIsvisible("hidden")
-    }
-  }
-
-  React.useEffect(() => {
-    window.addEventListener('scroll', () => {
-      scroll()
-    });
-  }, []);
-
-
-  const hanldeSubmit = (values) => {
-    if (page === 1) {
-      // do smth
-      console.log(values);
-      onClose();
-
-      return;
-    }
-
-    setPage((currentPage) => currentPage + 1);
-  };
-
-  const initialValues = {
-    name: "",
-    phone: "",
-    size: "7 см",
-  };
-
   return (
-    <ChakraProvider theme={theme}>
-      <Formik initialValues={initialValues} onSubmit={hanldeSubmit}>
-        {(props) => (
-          <>
-            <Modal
-              initialFocusRef={initialRef}
-              finalFocusRef={finalRef}
-              isOpen={isOpen}
-              onClose={onClose}
-            >
-              <ModalOverlay />
-              <OrderModal
-                page={page}
-                values={props.values}
-                onSubmit={props.handleSubmit}
-                initialRef={initialRef}
-                closeModal={onClose}
-              />
-            </Modal>
-            <Scrollbutton isvisible={isvisible} onClick={scrollButton} />
-            <Tabs isvisible={isvisible}/>
-            <Header openModal={onOpen}/>
-            <Nav display="flex" position="static" width="100%" bottom="0px" isvisible='isvisible' />
-            <Reviews openModal={onOpen} />
-            <Lan openModal={onOpen} />
-            <Examples />
-            <Advantages />
-            <Stock openModal={onOpen} />
-            <Individual />
-            <Stages />
-            <Buyer/>
-            <Contacts />
-            <Footer />
-            <Nav display="flex" position="fixed" width="100%" bottom="0px" isvisible={isvisible} />
-          </>
-        )}
-      </Formik>
-    </ChakraProvider>
+    <>
+      <Tabs isvisible={isvisible} />
+      <Reviews openModal={onOpen} />
+      <Lan openModal={onOpen} />
+      <Examples />
+      <Advantages />
+      <Stock openModal={onOpen} />
+      <Individual />
+      <Stages />
+      <Buyer />
+      <Contacts />
+    </>
   );
 };
 
