@@ -7,7 +7,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Category name="Кухни"/>
+      <Category name="Шкафы"/>
     </Layout>
   );
 };

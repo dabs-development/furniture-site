@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Text, Flex, Link } from "@chakra-ui/react";
 
-const Category = ({  openModal }) => {
+const Category = ({  openModal,name }) => {
 
 
   return (
@@ -28,11 +28,11 @@ const Category = ({  openModal }) => {
           opacity="0.5"
           borderLeft="2px solid #79B52D"
         >
-          Кухни
+          {name}
         </Text>
       </Flex>
       <Flex flexDirection="column" padding={5} borderLeft="3px solid #79B52D">
-        <Text fontSize="3rem">Кухни</Text>
+        <Text fontSize="3rem">{name}</Text>
         <Text fontSize="2rem" color="#79B52D">
           Фотогалерея готовых проектов
         </Text>

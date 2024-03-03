@@ -23,6 +23,7 @@ const Nav = ({ display, position, width, bottom, isvisible }) => {
           КУХНИ
         </Link>
         <Link
+        href="/cabinets"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
