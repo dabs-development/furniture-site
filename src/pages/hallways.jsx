@@ -19,7 +19,7 @@ const IndexPage = ({location}) => {
 
   return (
     <Layout dispaly={dispaly}>
-      <Category name="Шкафы"/>
+      <Category name="Прихожие"/>
     </Layout>
   );
 };

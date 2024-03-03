@@ -2,7 +2,7 @@ import * as React from "react";
 import { Box, Tabs, TabList, Tab } from "@chakra-ui/react";
 import { tabs } from "../model/main";
 
-const HeaderTabs = ({ visibleClass}) => {
+const HeaderTabs = ({ visibleClass,dispaly}) => {
   const [fixed, setIsfixed] = React.useState("static");
 
   React.useEffect(() => {
@@ -14,7 +14,7 @@ const HeaderTabs = ({ visibleClass}) => {
   }, [visibleClass]);
 
   return (
-    <Box as="header">
+    <Box as="header" display={dispaly}>
       <Tabs
         align="center"
         position={fixed}

@@ -38,7 +38,7 @@ const initialValues = {
   size: "7 см",
 };
 
-export default function Layout({ children}) {
+export default function Layout({ children,dispaly}) {
   const { isOpen, onOpen, onClose } = useDisclosure({ id: "order-modal" });
   const initialRef = useRef(null);
   const finalRef = useRef(null);
@@ -115,7 +115,7 @@ export default function Layout({ children}) {
                 />
               </Modal>
               <Scrollbutton isvisible={visibleClass} onClick={scrollButton} />
-              <Header openModal={onOpen}/>
+              <Header openModal={onOpen} dispaly={dispaly}/>
               <Nav
                 display="flex"
                 position="static"

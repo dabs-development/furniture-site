@@ -30,12 +30,14 @@ const Nav = ({ display, position, width, bottom, isvisible }) => {
           ШКАФЫ
         </Link>
         <Link
+        href="/wardrobes"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
           ГАРДЕРОБНЫЕ
         </Link>
         <Link
+         href="/hallways"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >

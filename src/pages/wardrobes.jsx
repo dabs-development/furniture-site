@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import App from "../components/App";
+import Category from "../components/Category";
 import Layout from "../components/layout";
 
 const IndexPage = ({location}) => {
@@ -18,9 +18,9 @@ const IndexPage = ({location}) => {
 
   return (
     <Layout dispaly={dispaly}>
-      <App />
+      <Category name="Гардеробные"/>
     </Layout>
-  )
+  );
 };
 
 export default IndexPage;

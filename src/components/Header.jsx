@@ -5,12 +5,12 @@ import Logo from "../images/logo.png";
 import HeaderTabs from "./HeaderTabs";
 import AppContext from "../context";
 
-const Header = ({ openModal}) => {
+const Header = ({ openModal,dispaly}) => {
   const context = useContext(AppContext);
 
   return (
     <Box as="header" >
-      <HeaderTabs visibleClass={context.visibleClass} />
+      <HeaderTabs visibleClass={context.visibleClass} dispaly={dispaly}/>
       <Grid
         bg="#fff"
         boxShadow="0 0 10px 5px rgba(221, 221, 221, 1)"
