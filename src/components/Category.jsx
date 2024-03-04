@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Text, Flex, Link } from "@chakra-ui/react";
 
-const Category = ({  openModal,name }) => {
+const Category = ({  openModal,name,mainText }) => {
 
 
   return (
@@ -32,21 +32,13 @@ const Category = ({  openModal,name }) => {
         </Text>
       </Flex>
       <Flex flexDirection="column" padding={5} borderLeft="3px solid #79B52D">
-        <Text fontSize="3rem">{name}</Text>
+        <Text fontSize={{sm: "2rem", md: "2rem", xl: "3rem"}} fontWeight="bold">{name}</Text>
         <Text fontSize="2rem" color="#79B52D">
           Фотогалерея готовых проектов
         </Text>
       </Flex>
       <Text paddingBottom={5} paddingTop={5}>
-        Мебель на кухне – это не только функциональные предметы, но и элементы,
-        придающие уют и стиль этому пространству. Она создает атмосферу комфорта
-        и гармонии, сочетая в себе изящество дизайна и практичность
-        использования. Каждая деталь мебели – будь то стильный стол, удобные
-        стулья или элегантные шкафы – добавляет неповторимый шарм кухонному
-        интерьеру, делая его привлекательным и функциональным одновременно.
-        Мебель на кухне – это место, где красота встречается с удобством,
-        создавая идеальную среду для приготовления пищи и приятного
-        времяпрепровождения.
+      {mainText}
       </Text>
     </Flex>
   );
