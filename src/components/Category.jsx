@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Text, Flex, Link } from "@chakra-ui/react";
+import { Text, Flex} from "@chakra-ui/react";
+import { Link } from "gatsby"
 
 const Category = ({  openModal,name,mainText }) => {
 
@@ -17,7 +18,7 @@ const Category = ({  openModal,name,mainText }) => {
       margin="auto"
     >
       <Flex paddingBottom={5}>
-        <Link href="/">
+        <Link to="/">
           <Text paddingRight={2} color="#79B52D">
             Главная
           </Text>
