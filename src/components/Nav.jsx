@@ -16,28 +16,28 @@ const Nav = ({ display, position, width, bottom, isvisible }) => {
     >
       <Flex margin="auto" justifyContent="space-evenly" width={width}>
         <Link
-          href="/kitchen"
+          href="/kitchen/"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
           КУХНИ
         </Link>
         <Link
-        href="/cabinets"
+        href="/cabinets/"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
           ШКАФЫ
         </Link>
         <Link
-        href="/wardrobes"
+        href="/wardrobes/"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
           ГАРДЕРОБНЫЕ
         </Link>
         <Link
-         href="/hallways"
+         href="/hallways/"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
