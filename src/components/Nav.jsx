@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Flex, Link } from "@chakra-ui/react";
+import { Flex} from "@chakra-ui/react";
+import { Link } from "gatsby"
 
 const Nav = ({ display, position, width, bottom, isvisible }) => {
   return (
@@ -16,28 +17,28 @@ const Nav = ({ display, position, width, bottom, isvisible }) => {
     >
       <Flex margin="auto" justifyContent="space-evenly" width={width}>
         <Link
-          href="/kitchen/"
+          to="/kitchen/"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
           КУХНИ
         </Link>
         <Link
-        href="/cabinets/"
+        to="/cabinets/"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
           ШКАФЫ
         </Link>
         <Link
-        href="/wardrobes/"
+        to="/wardrobes/"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
           ГАРДЕРОБНЫЕ
         </Link>
         <Link
-         href="/hallways/"
+         to="/hallways/"
           fontSize={{ sm: "sm", md: "md", xl: "xl" }}
           _hover={{ textDecoration: "none", opacity: "0.7" }}
         >
