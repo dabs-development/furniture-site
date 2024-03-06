@@ -9,6 +9,7 @@ import Lan from "./Lan";
 import Advantages from "./Advantages";
 import Stock from "./Stock";
 import Buyer from "./Buyer";
+import Comment from "./Comment";
 
 import AppContext from "../context";
 
@@ -26,6 +27,7 @@ const App = () => {
       <Stages />
       <Buyer />
       <Contacts />
+      <Comment/>
     </>
   );
 };
