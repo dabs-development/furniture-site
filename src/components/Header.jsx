@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Box, Button, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Link } from "gatsby"
 
 import Logo from "../images/logo.png";
 import HeaderTabs from "./HeaderTabs";
@@ -42,7 +43,9 @@ const Header = ({ openModal,dispaly}) => {
           mt={{ sm: "1rem", md: 0 }}
           justifySelf={{ sm: "center", md: "start" }}
         >
+          <Link to="/">
           <Image boxSize="130px" src={Logo} alt="Logo" padding={5} />
+          </Link>
         </GridItem>
 
         <GridItem
