@@ -21,7 +21,7 @@ import otzz6 from "../images/otzz6.jpg";
 
 
 const Comment = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState();
     const [sliderShow, setSliderShow] = useState(3);
 
     const settings = {
