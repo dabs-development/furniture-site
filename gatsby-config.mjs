@@ -34,6 +34,7 @@ const config = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-smoothscroll`,
   ],
 };
 

@@ -12,7 +12,7 @@ const Stock = ({ openModal}) => {
 
     return (
 
-    <Flex bg="#f1f3f9" flexDirection="column">
+    <Flex bg="#f1f3f9" flexDirection="column" id="stock">
         <Text margin="auto" fontSize="3rem" fontWeight="bold">Наши акции</Text>
         <Flex margin='auto' flexDirection={{ xl: 'row', lg: 'column', md: 'column', sm: "column" }} color="#fff">
             <Flex width={{xl:400,lg:400,md:400,sm:350}} height={200} position="relative" backgroundImage={fon3} backgroundPosition="center" marginTop={10} marginRight={{ xl: '10', lg: '0', md: '0', sm: '0' }} borderEndRadius={5} boxShadow="0px 0px 15px 4px rgba(0,0,0,0.3);">

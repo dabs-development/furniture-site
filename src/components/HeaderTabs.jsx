@@ -2,6 +2,8 @@ import * as React from "react";
 import { Box, Tabs, TabList, Tab } from "@chakra-ui/react";
 import { tabs } from "../model/main";
 
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 const HeaderTabs = ({ visibleClass,dispaly}) => {
   const [fixed, setIsfixed] = React.useState("static");
 
@@ -24,7 +26,7 @@ const HeaderTabs = ({ visibleClass,dispaly}) => {
       >
         <TabList width="100%">
           {tabs.map((tab, index) => (
-            <Tab key={`tab-${index}`} fontWeight={500}>
+            <Tab key={`tab-${index}`} fontWeight={500} onClick={() => scrollTo(tab.id)}>
               {tab.name}
             </Tab>
           ))}

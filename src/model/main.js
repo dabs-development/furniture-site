@@ -1,6 +1,6 @@
 export const tabs = [
-  { name: "Акции" },
-  { name: "Примеры работ" },
-  { name: "Отзывы" },
-  { name: "Контакты" },
+  { name: "Акции", id:"#stock" },
+  { name: "Примеры работ", id:"#examples" },
+  { name: "Отзывы", id:"#comment" },
+  { name: "Контакты", id:"#contacts" },
 ];

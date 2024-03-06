@@ -8,7 +8,7 @@ import shkaff from "../images/shkaff.jpg";
 import prih from "../images/prih2.jpeg";
 
 const Examples = () =>
-    <Flex flexDirection="column" bg='#f1f3f9' color="#79B52D" fontSize='2rem' padding={5}>
+    <Flex flexDirection="column" bg='#f1f3f9' color="#79B52D" fontSize='2rem' padding={5} id="examples">
         <Text margin="auto">Примеры наших работ</Text>
         <Grid color="black" gridTemplateColumns={{ xl: '1fr 1fr 1fr 1fr', lg: '1fr 1fr 1fr', md: '1fr 1fr', sm: "1fr" }}>
             <Link to="/kitchen/" >
