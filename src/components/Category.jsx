@@ -14,7 +14,7 @@ const Category = ({  openModal,name,mainText }) => {
       paddingRight={5}
       paddingBottom={7}
       paddingTop={4}
-      width="80%"
+      width={{sm: "95%", md: "80%", xl: "80%"}}
       margin="auto"
     >
       <Flex paddingBottom={5}>
@@ -34,7 +34,7 @@ const Category = ({  openModal,name,mainText }) => {
       </Flex>
       <Flex flexDirection="column" padding={5} borderLeft="3px solid #79B52D">
         <Text fontSize={{sm: "2rem", md: "2rem", xl: "3rem"}} fontWeight="bold">{name}</Text>
-        <Text fontSize="2rem" color="#79B52D">
+        <Text fontSize={{sm: "1.4rem", md: "1.4rem", xl: "3rem"}} color="#79B52D">
           Фотогалерея готовых проектов
         </Text>
       </Flex>
