@@ -34,7 +34,7 @@ const Lan = ({ openModal }) => (
         <Image borderRadius={7} src={bb} />
       </Flex>
     </Flex>
-    <Flex flexDirection="column" padding={10}>
+    <Flex flexDirection="column" padding={{ xl: "20px", lg: "20px", md: "20px", sm: "10px" }}>
       <Text
         color="#79B52D"
         fontSize={{ sm: "1.5rem", md: "1.5rem", xl: "1.5rem" }}
@@ -47,7 +47,7 @@ const Lan = ({ openModal }) => (
       >
         по вашим эскизам или из нашего каталога
       </Text>
-      <Text>
+      <Text marginTop={5}>
         Корпусная мебель – это искусно созданные изделия, объединяющие в себе
         функциональность, красоту и практичность. Она представляет собой
         гармоничное сочетание изысканного дизайна и высокого качества

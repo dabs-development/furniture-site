@@ -61,7 +61,7 @@ const Comment = () => {
     <Flex bg='#f1f3f9' color="black" flexDirection="column" paddingLeft={5} paddingRight={5} paddingBottom={7} paddingTop={4} id="comment">
         <Flex flexDirection="column" padding={5} borderLeft="3px solid #79B52D" marginBottom={5}>
             <Text fontSize={{ sm: "2rem", md: "2rem", xl: "3rem" }}>ОТЗЫВЫ</Text>
-            <Text fontSize="2rem" color="#79B52D">Мы работаем для вас и стараемся быть лучше</Text>
+            <Text fontSize={{sm: "1.4rem", md: "1.4rem", xl: "3rem"}} color="#79B52D">Мы работаем для вас и стараемся быть лучше</Text>
         </Flex>
         <Carousel {...settings}>
             <Flex

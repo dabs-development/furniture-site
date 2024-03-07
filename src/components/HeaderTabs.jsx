@@ -26,7 +26,7 @@ const HeaderTabs = ({ visibleClass,dispaly}) => {
       >
         <TabList width="100%">
           {tabs.map((tab, index) => (
-            <Tab key={`tab-${index}`} fontWeight={500} onClick={() => scrollTo(tab.id)}>
+            <Tab key={`tab-${index}`} fontWeight={500} onClick={() => scrollTo(tab.id)} fontSize={{sm: ".8rem", md: "1.4rem", xl: "1.4rem"}}>
               {tab.name}
             </Tab>
           ))}

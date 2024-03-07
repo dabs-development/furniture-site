@@ -52,7 +52,7 @@ const Reviews = ({ openModal }) => {
               bg="#79B52D"
               colorScheme="teal"
               onClick={openModal}
-              width={350}
+              width={{ xl: "350px", lg: "350px", md: "350px", sm: "300px" }}
             >
               ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
             </Button>
@@ -95,7 +95,7 @@ const Reviews = ({ openModal }) => {
               bg="#79B52D"
               colorScheme="teal"
               onClick={openModal}
-              width={350}
+              width={{ xl: "350px", lg: "350px", md: "350px", sm: "300px" }}
             >
               УЗНАТЬ ПОДРОБНЕЕ
             </Button>
