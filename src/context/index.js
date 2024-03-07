@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 const defaultContextValue = {
   visibleClass: "",
-  onOpen: () => null,
+  onModalOpen: () => null,
 };
 
 const AppContext = createContext(defaultContextValue);

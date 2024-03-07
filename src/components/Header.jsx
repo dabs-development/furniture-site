@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { Box, Button, Grid, GridItem, Image } from "@chakra-ui/react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 import Logo from "../images/logo.png";
 import HeaderTabs from "./HeaderTabs";
 import AppContext from "../context";
 
-const Header = ({ openModal, dispaly }) => {
+const Header = ({ display }) => {
   const context = useContext(AppContext);
 
   return (
-    <Box as="header" >
-      <HeaderTabs visibleClass={context.visibleClass} dispaly={dispaly} />
+    <Box as="header">
+      <HeaderTabs visibleClass={context.visibleClass} display={display} />
       <Grid
         bg="#fff"
         boxShadow="0 0 10px 5px rgba(221, 221, 221, 1)"
@@ -55,7 +55,11 @@ const Header = ({ openModal, dispaly }) => {
           alignSelf="center"
           justifyContent="center"
         >
-          <Button bg="#79B52D" colorScheme="teal" onClick={openModal}>
+          <Button
+            bg="#79B52D"
+            colorScheme="teal"
+            onClick={context.onModalOpen("order")}
+          >
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
           <Link to="#">
@@ -66,7 +70,8 @@ const Header = ({ openModal, dispaly }) => {
           </Link>
         </GridItem>
 
-        <GridItem fontSize={{ sm: "sm", md: "sm", xl: "md" }}
+        <GridItem
+          fontSize={{ sm: "sm", md: "sm", xl: "md" }}
           area="contacts"
           textAlign={{ sm: "center", xl: "end" }}
           alignSelf="center"

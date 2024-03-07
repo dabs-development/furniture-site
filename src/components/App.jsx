@@ -18,16 +18,16 @@ const App = () => {
 
   return (
     <>
-      <Reviews openModal={context.onOpen} />
-      <Lan openModal={context.onOpen} />
+      <Reviews />
+      <Lan openModal={context.onModalOpen} />
       <Examples />
       <Advantages />
-      <Stock openModal={context.onOpen} />
+      <Stock openModal={context.onModalOpen} />
       <Individual />
       <Stages />
       <Buyer />
       <Contacts />
-      <Comment/>
+      <Comment />
     </>
   );
 };

@@ -1,23 +1,30 @@
 import * as React from "react";
-import {
-  Box,
-  Tabs,
-  TabList,
-  Tab,
-  Button,
-  Grid,
-  GridItem,
-  Image,
-} from "@chakra-ui/react";
-import { tabs } from "../model/main";
+import { Box, Button } from "@chakra-ui/react";
 
-
-const Scrollbutton = ({isvisible,onClick}) => {
+const Scrollbutton = ({ isvisible, onClick }) => {
   return (
-    <Box height={70} width={70} position="fixed" zIndex={100} bottom={100} left={10} visibility={isvisible} onClick={onClick}>
-        <Button colorScheme='teal' size='lg' borderRadius="50%" height={70} width={70} bg="#79B52D" fontSize="3rem" fontWeight="bold">
+    <Box
+      height={70}
+      width={70}
+      position="fixed"
+      zIndex={100}
+      bottom={100}
+      left={10}
+      visibility={isvisible}
+      onClick={onClick}
+    >
+      <Button
+        colorScheme="teal"
+        size="lg"
+        borderRadius="50%"
+        height={70}
+        width={70}
+        bg="#79B52D"
+        fontSize="3rem"
+        fontWeight="bold"
+      >
         &#8593;
-  </Button>
+      </Button>
     </Box>
   );
 };

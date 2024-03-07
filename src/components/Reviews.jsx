@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Carousel from "react-slick";
 import { Box, Flex, Text, Button } from "@chakra-ui/react";
 
@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import fon from "../images/fon1.jpg";
 import fonn from "../images/fon2.jpeg";
+import AppContext from "../context";
 
 const settings = {
   dots: true,
@@ -20,7 +21,9 @@ const settings = {
   waitForAnimate: false,
 };
 
-const Reviews = ({ openModal }) => {
+const Reviews = () => {
+  const context = useContext(AppContext);
+
   return (
     <Box height="34rem" width="100%">
       <Carousel {...settings}>
@@ -51,7 +54,7 @@ const Reviews = ({ openModal }) => {
             <Button
               bg="#79B52D"
               colorScheme="teal"
-              onClick={openModal}
+              onClick={context.onModalOpen("simple")}
               width={{ xl: "350px", lg: "350px", md: "350px", sm: "300px" }}
             >
               ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
@@ -94,7 +97,7 @@ const Reviews = ({ openModal }) => {
             <Button
               bg="#79B52D"
               colorScheme="teal"
-              onClick={openModal}
+              onClick={context.onModalOpen("simple")}
               width={{ xl: "350px", lg: "350px", md: "350px", sm: "300px" }}
             >
               УЗНАТЬ ПОДРОБНЕЕ

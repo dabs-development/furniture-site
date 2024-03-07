@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useState } from "react";
+import React, { useMemo, useState, useCallback } from "react";
 import { Formik } from "formik";
 import {
   ChakraProvider,
@@ -35,28 +35,48 @@ const theme = extendTheme({
 const initialValues = {
   name: "",
   phone: "",
-  size: "7 см",
+  categories: {
+    kitchen: false,
+    hallway: false,
+    dressingRoom: false,
+    closet: false,
+    other: false,
+  },
 };
 
-export default function Layout({ children,dispaly}) {
+export default function Layout({ children, display }) {
   const { isOpen, onOpen, onClose } = useDisclosure({ id: "order-modal" });
-  const initialRef = useRef(null);
-  const finalRef = useRef(null);
 
-  const [visibleClass, setVisibleClass] = React.useState("hidden");
-
+  const [visibleClass, setVisibleClass] = useState("hidden");
+  const [modalType, setModalType] = useState("order");
   const [page, setPage] = useState(0);
 
-  const hanldeSubmit = (values) => {
-    if (page === 1) {
-      // do smth
-      console.log(values);
-      onClose();
+  const openModal = useCallback(
+    (type) => () => {
+      setModalType(type);
+      onOpen();
+    },
+    [onOpen],
+  );
 
+  const hanldeSubmit = (values, { resetForm }) => {
+    if (page !== 1) {
+      setPage((currentPage) => currentPage + 1);
       return;
     }
 
-    setPage((currentPage) => currentPage + 1);
+    // send e-mail here
+    console.log(values);
+
+    onClose();
+    setPage(0);
+    resetForm();
+  };
+
+  const closeModal = (resetForm) => () => {
+    setPage(0);
+    onClose();
+    resetForm();
   };
 
   const scrollButton = () => {
@@ -88,9 +108,9 @@ export default function Layout({ children,dispaly}) {
   const contextValue = useMemo(
     () => ({
       visibleClass,
-      onOpen,
+      onModalOpen: openModal,
     }),
-    [visibleClass, onOpen],
+    [visibleClass, openModal],
   );
 
   return (
@@ -99,23 +119,18 @@ export default function Layout({ children,dispaly}) {
         <Formik initialValues={initialValues} onSubmit={hanldeSubmit}>
           {(props) => (
             <>
-              <Modal
-                initialFocusRef={initialRef}
-                finalFocusRef={finalRef}
-                isOpen={isOpen}
-                onClose={onClose}
-              >
+              <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <OrderModal
                   page={page}
+                  type={modalType}
                   values={props.values}
                   onSubmit={props.handleSubmit}
-                  initialRef={initialRef}
-                  closeModal={onClose}
+                  closeModal={closeModal(props.resetForm)}
                 />
               </Modal>
               <Scrollbutton isvisible={visibleClass} onClick={scrollButton} />
-              <Header openModal={onOpen} dispaly={dispaly}/>
+              <Header display={display} />
               <Nav
                 display="flex"
                 position="static"

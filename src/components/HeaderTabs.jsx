@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Box, Tabs, TabList, Tab } from "@chakra-ui/react";
-import { tabs } from "../model/main";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
-import scrollTo from 'gatsby-plugin-smoothscroll';
+import { TABS } from "../model/main";
 
-const HeaderTabs = ({ visibleClass,dispaly}) => {
+const HeaderTabs = ({ visibleClass, display }) => {
   const [fixed, setIsfixed] = React.useState("static");
 
   React.useEffect(() => {
@@ -16,7 +16,7 @@ const HeaderTabs = ({ visibleClass,dispaly}) => {
   }, [visibleClass]);
 
   return (
-    <Box as="header" display={dispaly}>
+    <Box as="header" display={display}>
       <Tabs
         align="center"
         position={fixed}
@@ -25,8 +25,13 @@ const HeaderTabs = ({ visibleClass,dispaly}) => {
         zIndex={156465}
       >
         <TabList width="100%">
-          {tabs.map((tab, index) => (
-            <Tab key={`tab-${index}`} fontWeight={500} onClick={() => scrollTo(tab.id)} fontSize={{sm: ".8rem", md: "1.4rem", xl: "1.4rem"}}>
+          {TABS.map((tab, index) => (
+            <Tab
+              key={`tab-${index}`}
+              fontWeight={500}
+              onClick={() => scrollTo(tab.id)}
+              fontSize="1rem"
+            >
               {tab.name}
             </Tab>
           ))}
