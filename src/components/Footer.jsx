@@ -69,7 +69,7 @@ const Footer = () => (
       <Flex flexDirection="column" paddingTop={5}>
         <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>+7 (927) 288-99-33</Text>
         <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>topqualitymebel@mail.ru</Text>
-        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>
+        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}} display="none">
           Москва,пр-лавешкина. 45/4
         </Text>
       </Flex>
