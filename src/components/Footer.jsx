@@ -7,6 +7,7 @@ import Logo from "../images/logo.png";
 import what from "../images/what.png";
 import vk from "../images/vk.png";
 import inst from "../images/inst.png";
+import teleg from "../images/telegram.png";
 
 
 const Footer = () => (
@@ -35,7 +36,7 @@ const Footer = () => (
       </Box>
       <Spacer />
       <Flex gap={5} paddingTop={5}>
-        <Link>
+        <Link to="#">
           <Image
             src={what}
             alt="img"
@@ -44,17 +45,18 @@ const Footer = () => (
             style={{ backgroundSize: "cover" }}
           />
         </Link>
-        <Link>
+        <Link to="#">
           <Image
-            src={vk}
+            src={teleg}
             alt="img"
             width={43}
             quality={95}
             style={{ backgroundSize: "cover" }}
           />
         </Link>
-        <Link marginLeft={3}>
+        <Link marginLeft={3} to="#">
           <Image
+          display="none"
             src={inst}
             alt="img"
             width={43}
@@ -65,17 +67,17 @@ const Footer = () => (
       </Flex>
       <Spacer />
       <Flex flexDirection="column" paddingTop={5}>
-        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>+7 (999) 999-38-96</Text>
-        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>mebel.top.qa@gmail.com</Text>
+        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>+7 (927) 288-99-33</Text>
+        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>topqualitymebel@mail.ru</Text>
         <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>
           Москва,пр-лавешкина. 45/4
         </Text>
       </Flex>
       <Spacer />
       <Flex flexDirection="column" paddingTop={5}>
-        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>ИП Иван Иванович Иванов</Text>
-        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>ИНН: 580315332567</Text>
-        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>ОГРНИП: 35345675044541</Text>
+        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>ИП Баранов Юрий Олегович</Text>
+        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>ИНН: 580307686539</Text>
+        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>ОГРНИП: 324580000010414</Text>
       </Flex>
       <Spacer />
     </Wrap>

@@ -2,9 +2,10 @@ import * as React from "react";
 import { Text, Flex} from "@chakra-ui/react";
 import { Link } from "gatsby"
 
-const Category = ({  openModal,name,mainText }) => {
+const Category = ({  openModal,name,mainText,block }) => {
 
-
+ console.log(block)
+ console.log(name)
   return (
     <Flex
       bg="fff"
@@ -34,8 +35,8 @@ const Category = ({  openModal,name,mainText }) => {
       </Flex>
       <Flex flexDirection="column" padding={5} borderLeft="3px solid #79B52D">
         <Text fontSize={{sm: "2rem", md: "2rem", xl: "3rem"}} fontWeight="bold">{name}</Text>
-        <Text fontSize={{sm: "1.4rem", md: "1.4rem", xl: "3rem"}} color="#79B52D">
-          Фотогалерея готовых проектов
+        <Text fontSize={{sm: "1.4rem", md: "1.4rem", xl: "3rem"}} color="#79B52D" display={block}>
+          Фото готовых проектов
         </Text>
       </Flex>
       <Text paddingBottom={5} paddingTop={5}>

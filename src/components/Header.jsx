@@ -6,12 +6,12 @@ import Logo from "../images/logo.png";
 import HeaderTabs from "./HeaderTabs";
 import AppContext from "../context";
 
-const Header = ({ openModal,dispaly}) => {
+const Header = ({ openModal, dispaly }) => {
   const context = useContext(AppContext);
 
   return (
     <Box as="header" >
-      <HeaderTabs visibleClass={context.visibleClass} dispaly={dispaly}/>
+      <HeaderTabs visibleClass={context.visibleClass} dispaly={dispaly} />
       <Grid
         bg="#fff"
         boxShadow="0 0 10px 5px rgba(221, 221, 221, 1)"
@@ -44,7 +44,7 @@ const Header = ({ openModal,dispaly}) => {
           justifySelf={{ sm: "center", md: "start" }}
         >
           <Link to="/">
-          <Image boxSize="130px" src={Logo} alt="Logo" padding={5} />
+            <Image boxSize="130px" src={Logo} alt="Logo" padding={5} />
           </Link>
         </GridItem>
 
@@ -58,24 +58,24 @@ const Header = ({ openModal,dispaly}) => {
           <Button bg="#79B52D" colorScheme="teal" onClick={openModal}>
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
-          <Button bg="#79B52D" colorScheme="teal">
-            {" "}
-            WHATSAPP
-          </Button>
+          <Link to="#">
+            <Button bg="#79B52D" colorScheme="teal">
+              {" "}
+              WHATSAPP
+            </Button>
+          </Link>
         </GridItem>
 
-        <GridItem fontSize={{sm: "sm", md: "sm", xl: "md"} }
+        <GridItem fontSize={{ sm: "sm", md: "sm", xl: "md" }}
           area="contacts"
           textAlign={{ sm: "center", xl: "end" }}
           alignSelf="center"
           padding={{ md: "1rem", sm: "1rem" }}
           minWidth="275px"
         >
-          Собственное производство
+          Телефон: +7 (927) 288-99-33
           <br />
-          Телефон: +7 (999) 999-38-96
-          <br />
-          Почта: mebel.top.qa@gmail.com
+          Почта: topqualitymebel@mail.ru
         </GridItem>
       </Grid>
     </Box>

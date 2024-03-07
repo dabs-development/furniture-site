@@ -11,7 +11,7 @@ const IndexPage = ({location}) => {
 
   return (
     <Layout dispaly={dispaly}>
-      <Category name="Гардеробные" mainText={mainText}/>
+      <Category name="Гардеробные" mainText={mainText} block="none"/>
     </Layout>
   );
 };

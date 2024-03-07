@@ -17,8 +17,8 @@ const Contacts = () => (
             В сети
           </Text>
           <Box height="1px" bg="black" width="100%" />
-          <Text fontSize="2xl">555-555-5555</Text>
-          <Text fontSize="2xl">info@mailservice.com</Text>
+          <Text fontSize="2xl">+7 (927) 288-99-33</Text>
+          <Text fontSize="2xl">topqualitymebel@mail.ru</Text>
         </WrapItem>
         <WrapItem flexDirection="column" marginLeft={1}>
           <Text fontWeight="bold" fontSize="xl">

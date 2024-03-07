@@ -17,7 +17,7 @@ const Advantages = () =>
             <Flex flexDirection="column" padding={5} borderRadius={5} boxShadow= '0px -5px 10px 0px rgba(0, 0, 0, 0.5)'>
                 <Text color="##6b6b6b" opacity="0.3" fontWeight='bold' fontSize='3rem' marginLeft="auto">02</Text>
                 <Text paddingTop={2} paddingBottom={2} fontSize='1.7rem' fontWeight='bold'>Мы <Text color="#79B52D">за качество</Text></Text>
-                <Text>Считаем этот критерий важнейшим по умолчанию. Мы работаем на современном оборудовании, только с проверенными поставщиками, с применением качественных материалов и комплектующих.</Text>
+                <Text>Считаем этот критерий важнейшим по умолчанию. Специалисты работают на современном оборудовании, только с проверенными поставщиками, с применением качественных материалов и комплектующих.</Text>
             </Flex>
             <Flex flexDirection="column" padding={5} borderRadius={5} boxShadow= '0px -5px 10px 0px rgba(0, 0, 0, 0.5)'>
                 <Text color="##6b6b6b" opacity="0.3" fontWeight='bold' fontSize='3rem' marginLeft="auto">03</Text>

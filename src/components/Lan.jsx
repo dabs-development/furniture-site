@@ -37,12 +37,12 @@ const Lan = ({ openModal }) => (
     <Flex flexDirection="column" padding={{ xl: "20px", lg: "20px", md: "20px", sm: "10px" }}>
       <Text
         color="#79B52D"
-        fontSize={{ sm: "1.5rem", md: "1.5rem", xl: "1.5rem" }}
+        fontSize={{ sm: "1.7rem", md: "2rem", xl: "3rem" }}
       >
         Изготовление корпусной мебели
       </Text>
       <Text
-        fontSize={{ sm: "1.5rem", md: "2rem", xl: "3rem" }}
+        fontSize={{ sm: "1.5rem", md: "1.5rem", xl: "1.5rem" }}
         fontWeight="bold"
       >
         по вашим эскизам или из нашего каталога
