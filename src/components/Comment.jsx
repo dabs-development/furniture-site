@@ -14,6 +14,7 @@ import otzz3 from "../images/otzz3.jpg";
 import otzz4 from "../images/otzz4.jpg";
 import otzz5 from "../images/otzz5.jpg";
 import otzz6 from "../images/otzz6.jpg";
+import otzz7 from "../images/otzz7.jpg";
 
 
 
@@ -137,6 +138,19 @@ const Comment = () => {
                 <Box height={500} width={232} margin="auto">
                     <Image
                         src={otzz6} boxShadow="0 1px 4px rgba(0, 0, 0, .3),
+            -23px 0 20px -23px rgba(0, 0, 0, .8),
+            23px 0 20px -23px rgba(0, 0, 0, .8),
+            0 0 40px rgba(0, 0, 0, .1) inset;"/>
+                </Box>
+            </Flex>
+            <Flex
+                fontSize="20rem"
+                width="100%"
+                bg='#f1f3f9'
+            >
+                <Box height={500} width={232} margin="auto">
+                    <Image
+                        src={otzz7} boxShadow="0 1px 4px rgba(0, 0, 0, .3),
             -23px 0 20px -23px rgba(0, 0, 0, .8),
             23px 0 20px -23px rgba(0, 0, 0, .8),
             0 0 40px rgba(0, 0, 0, .1) inset;"/>
