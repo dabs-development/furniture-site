@@ -3,8 +3,8 @@ import * as React from "react";
 import App from "../components/App";
 import Layout from "../components/layout";
 
-const IndexPage = ({ location }) => {
-  const [display, setDisplay] = React.useState("context");
+const IndexPage = () => {
+  const [display] = React.useState("context");
 
   return (
     <Layout display={display}>
@@ -15,4 +15,4 @@ const IndexPage = ({ location }) => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Главная</title>;

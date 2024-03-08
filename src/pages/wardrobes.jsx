@@ -6,8 +6,8 @@ import Layout from "../components/layout";
 const mainText =
   "Современные гардеробные помещения представляют собой пространства роскошного уюта и функциональной организации. Они обычно имеют стильный дизайн, отличающийся элегантными линиями и высококачественными отделками. Благодаря передовым технологиям и инновационным решениям, современные гардеробные могут быть полностью адаптированы к потребностям владельца, предлагая широкий спектр модульных элементов для хранения одежды, обуви, аксессуаров и других вещей.";
 
-const IndexPage = ({ location }) => {
-  const [display, setDisplay] = React.useState("none");
+const IndexPage = () => {
+  const [display] = React.useState("none");
 
   return (
     <Layout display={display}>
@@ -18,4 +18,4 @@ const IndexPage = ({ location }) => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Гардеробные</title>;

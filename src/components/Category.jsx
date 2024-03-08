@@ -1,16 +1,10 @@
 import * as React from "react";
-import { Divider, Text, Flex,Grid,Box,Image } from "@chakra-ui/react";
-import { Link, } from "gatsby";
-
-
+import { Divider, Text, Flex } from "@chakra-ui/react";
+import { Link } from "gatsby";
 
 import InlineForm from "./form/InlineForm";
 
-
-
-const Category = ({ name, mainText, block,photos }) => {
-
-
+const Category = ({ name, mainText, block, children }) => {
   return (
     <Flex
       bg="fff"
@@ -54,15 +48,7 @@ const Category = ({ name, mainText, block,photos }) => {
         </Text>
       </Flex>
       <Text paddingTop={5}>{mainText}</Text>
-      <Grid gridTemplateColumns={{ sm: "1fr", md: "1fr 1fr",lg: "1fr 1fr 1fr", xl: "1fr 1fr 1fr 1fr" }} gridTemplateRows="1fr">
-      {photos ?
-      photos?.map((tab, index) => (
-            <Box>
-             <Image src={tab.src}/> 
-            </Box> 
-          )) : <Box></Box>
-          }
-      </Grid>
+      {children}
 
       <Divider m="2rem 0" />
 
