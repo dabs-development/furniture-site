@@ -34,24 +34,32 @@ const OrderModal = ({ type, page, closeModal }) => {
       default:
         return null;
     }
-  }, [page, type]);
+  }, [page, isSimple]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     submitForm();
   };
 
+  const isMainValid = useMemo(() => {
+    return !values.name || !values.phone;
+  }, [values]);
+
   const isSubmitDisabled = useMemo(() => {
+    if (isSimple) {
+      return isMainValid;
+    }
+
     if (page === 0) {
       return Object.values(values.categories).every((value) => !value);
     }
 
     if (page === 1) {
-      return !values.name || !values.phone;
+      return isMainValid;
     }
 
     return false;
-  }, [values, page]);
+  }, [values, page, isMainValid]);
 
   const btnValue = useMemo(() => {
     if (isSimple) {
