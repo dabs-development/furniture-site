@@ -14,7 +14,11 @@ import {
 import kk from "../images/kk.jpg";
 import bb from "../images/bb.jpg";
 
-const Lan = ({ openModal }) => (
+const Lan = ({ openModal }) => {
+  
+ return (
+  
+
   <Grid
     bg="#fff"
     gridTemplateColumns={{ xl: "1fr 2fr", lg: "1fr 2fr", md: "1fr", sm: "1fr" }}
@@ -70,6 +74,6 @@ const Lan = ({ openModal }) => (
       </Button>
     </Flex>
   </Grid>
-);
+)};
 
 export default Lan;

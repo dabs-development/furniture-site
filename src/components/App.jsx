@@ -19,10 +19,10 @@ const App = () => {
   return (
     <>
       <Reviews />
-      <Lan openModal={context.onModalOpen} />
+      <Lan openModal={context.onModalOpen("order")} />
       <Examples />
       <Advantages />
-      <Stock openModal={context.onModalOpen} />
+      <Stock openModal={context.onModalOpen("simple")} />
       <Individual />
       <Stages />
       <Buyer />
