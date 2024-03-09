@@ -16,6 +16,7 @@ const IndexPage = () => {
     <Layout display={display}>
       <Category name="Кухни" mainText={mainText} block="context">
         <Grid
+        gap={5}
           gridTemplateColumns={{
             sm: "1fr",
             md: "1fr 1fr",
@@ -25,8 +26,8 @@ const IndexPage = () => {
           gridTemplateRows="1fr"
         >
           {photos?.map((photo, index) => (
-            <Box key={`image-${index}`}>
-              <Image src={photo} />
+            <Box key={`image-${index}`} height={340} width="100%" cursor="pointer" _hover={{ textDecoration: "none", transform: 'scale(1.05)' }}>
+              <Image src={photo} backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
             </Box>
           ))}
         </Grid>

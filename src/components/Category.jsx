@@ -47,7 +47,7 @@ const Category = ({ name, mainText, block, children }) => {
           Фото готовых проектов
         </Text>
       </Flex>
-      <Text paddingTop={5}>{mainText}</Text>
+      <Text paddingTop={5} paddingBottom={5}>{mainText}</Text>
       {children}
 
       <Divider m="2rem 0" />

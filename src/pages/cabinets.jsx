@@ -1,18 +1,9 @@
 import * as React from "react";
-
+import { Grid, Box, Image } from "@chakra-ui/react";
 import Category from "../components/Category";
 import Layout from "../components/layout";
 
-const photos = [
-  { src: "../images/shkaf(1).jpg" },
-  { src: "../images/shkaf(2).jpg" },
-  { src: "../images/shkaf(3).jpg" },
-  { src: "../images/shkaf(4).jpg" },
-  { src: "../images/shkaf(5).jpg" },
-  { src: "../images/shkaf(6).jpg" },
-  { src: "../images/shkaf(7).jpg" },
-  { src: "../images/shkaf(8).jpg" },
-];
+import photos from "../model/cabinetPhoto";
 
 const mainText =
   "Современные шкафы представляют собой элегантное сочетание функциональности и стиля. Их четкие линии и изысканные отделения создают впечатляющий внешний вид, который подчеркивает современный интерьер. Материалы, используемые в производстве, отличаются прочностью и долговечностью, добавляя шкафам утонченный шарм. Современные шкафы очаровывают своей функциональностью: они предлагают широкий выбор встроенных элементов для хранения, включая выдвижные ящики, вешалки, полки и даже встроенную подсветку. В результате создается визуально привлекательное и удобное пространство для хранения одежды, обуви и других предметов.";
@@ -25,9 +16,26 @@ const IndexPage = () => {
       <Category
         name="Шкафы"
         mainText={mainText}
-        block="context"
-        photos={photos}
-      />
+        block="context">
+          <Grid
+        gap={5}
+          gridTemplateColumns={{
+            sm: "1fr",
+            md: "1fr 1fr",
+            lg: "1fr 1fr 1fr",
+            xl: "1fr 1fr 1fr 1fr",
+          }}
+          gridTemplateRows="1fr"
+        >
+          {photos?.map((photo, index) => (
+            <Box key={`image-${index}`} height={340} width="100%" cursor="pointer" _hover={{ textDecoration: "none", transform: 'scale(1.05)' }}>
+              <Image src={photo} backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
+            </Box>
+          ))}
+        </Grid>
+        </Category>
+        
+
     </Layout>
   );
 };
