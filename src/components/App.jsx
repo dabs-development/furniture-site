@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import Contacts from "./Contacts";
 import Reviews from "./Reviews";
@@ -11,18 +11,14 @@ import Stock from "./Stock";
 import Buyer from "./Buyer";
 import Comment from "./Comment";
 
-import AppContext from "../context";
-
 const App = () => {
-  const context = useContext(AppContext);
-
   return (
     <>
       <Reviews />
-      <Lan openModal={context.onModalOpen("order")} />
+      <Lan />
       <Examples />
       <Advantages />
-      <Stock openModal={context.onModalOpen("simple")} />
+      <Stock />
       <Individual />
       <Stages />
       <Buyer />

@@ -53,15 +53,13 @@ export default function Layout({ children, display }) {
   const [modalType, setModalType] = useState("order");
   const [page, setPage] = useState(0);
 
+  const closeImagePopup = () => {
+    setopen("hidden");
+  };
 
-  const closeImagePopup =()=>{
-    setopen("hidden")
-  }
-
-  const openImagePopup =()=>{
-    // setopen("visibility") 
-    console.log("sdfsdfd")
-  }
+  const openImagePopup = () => {
+    setopen("visibility");
+  };
 
   const openModal = useCallback(
     (type) => () => {
@@ -121,9 +119,9 @@ export default function Layout({ children, display }) {
     () => ({
       visibleClass,
       onModalOpen: openModal,
-      onImageModalOpen:openImagePopup,
+      onImageModalOpen: openImagePopup,
     }),
-    [visibleClass, openModal,openImagePopup],
+    [visibleClass, openModal, openImagePopup],
   );
 
   return (
@@ -133,7 +131,7 @@ export default function Layout({ children, display }) {
           {(props) => (
             <>
               <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay/>
+                <ModalOverlay />
                 <OrderModal
                   page={page}
                   type={modalType}
@@ -142,9 +140,9 @@ export default function Layout({ children, display }) {
                   closeModal={closeModal(props.resetForm)}
                 />
               </Modal>
-              
+
               <Scrollbutton isvisible={visibleClass} onClick={scrollButton} />
-              <ImageModal oppen={oppen} closeImagePopup={closeImagePopup}/>
+              <ImageModal oppen={oppen} closeImagePopup={closeImagePopup} />
               <Header display={display} />
               <Nav
                 display="flex"
