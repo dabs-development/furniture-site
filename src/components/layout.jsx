@@ -14,6 +14,7 @@ import OrderModal from "./OrderModal";
 import Scrollbutton from "./Scrollbutton";
 import Nav from "./Nav";
 import AppContext from "../context/index";
+import ImageModal from "./ImageModal";
 
 const theme = extendTheme({
   breakpoints: {
@@ -48,8 +49,19 @@ export default function Layout({ children, display }) {
   const { isOpen, onOpen, onClose } = useDisclosure({ id: "order-modal" });
 
   const [visibleClass, setVisibleClass] = useState("hidden");
+  const [oppen, setopen] = useState("visibility");
   const [modalType, setModalType] = useState("order");
   const [page, setPage] = useState(0);
+
+
+  const closeImagePopup =()=>{
+    setopen("hidden")
+  }
+
+  const openImagePopup =()=>{
+    // setopen("visibility") 
+    console.log("sdfsdfd")
+  }
 
   const openModal = useCallback(
     (type) => () => {
@@ -109,8 +121,9 @@ export default function Layout({ children, display }) {
     () => ({
       visibleClass,
       onModalOpen: openModal,
+      onImageModalOpen:openImagePopup,
     }),
-    [visibleClass, openModal],
+    [visibleClass, openModal,openImagePopup],
   );
 
   return (
@@ -120,7 +133,7 @@ export default function Layout({ children, display }) {
           {(props) => (
             <>
               <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
+                <ModalOverlay/>
                 <OrderModal
                   page={page}
                   type={modalType}
@@ -129,7 +142,9 @@ export default function Layout({ children, display }) {
                   closeModal={closeModal(props.resetForm)}
                 />
               </Modal>
+              
               <Scrollbutton isvisible={visibleClass} onClick={scrollButton} />
+              <ImageModal oppen={oppen} closeImagePopup={closeImagePopup}/>
               <Header display={display} />
               <Nav
                 display="flex"

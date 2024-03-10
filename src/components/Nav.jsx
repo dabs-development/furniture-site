@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 const Nav = ({ display, position, width, bottom, isvisible }) => {
   return (
     <Flex
+    zIndex={112}
       bg="#4E4A49"
       height="75PX"
       color="#fff"

@@ -4,9 +4,16 @@ import { Link } from "gatsby";
 
 import InlineForm from "./form/InlineForm";
 
+import AppContext from "../context";
+
+
 const Category = ({ name, mainText, block, children }) => {
+
+  const context = React.useContext(AppContext);
+  
   return (
     <Flex
+    position="relative"
       bg="fff"
       color="black"
       flexDirection="column"
@@ -51,7 +58,6 @@ const Category = ({ name, mainText, block, children }) => {
       {children}
 
       <Divider m="2rem 0" />
-
       <InlineForm />
     </Flex>
   );
