@@ -52,16 +52,16 @@ export default function Layout({ children, display }) {
   const [oppen, setopen] = useState("hidden");
   const [modalType, setModalType] = useState("order");
   const [page, setPage] = useState(0);
-  const [photo, setPhoto] = useState('');
+  const [photo, setPhoto] = useState("");
 
   const closeImagePopup = () => {
     setopen("hidden");
-    console.log("закрыть")
+    console.log("закрыть");
   };
 
   const openImagePopup = (UrlPhoto) => {
     setopen("visibility");
-    setPhoto(UrlPhoto)
+    setPhoto(UrlPhoto);
   };
 
   const openModal = useCallback(
@@ -73,7 +73,7 @@ export default function Layout({ children, display }) {
   );
 
   const hanldeSubmit = (values, { resetForm }) => {
-    if (page !== 1) {
+    if (modalType === "order" && page !== 1) {
       setPage((currentPage) => currentPage + 1);
       return;
     }
@@ -124,7 +124,7 @@ export default function Layout({ children, display }) {
       onModalOpen: openModal,
       onImageModalOpen: openImagePopup,
     }),
-    [visibleClass, openModal, openImagePopup,photo],
+    [visibleClass, openModal, openImagePopup, photo],
   );
 
   return (
@@ -145,7 +145,11 @@ export default function Layout({ children, display }) {
               </Modal>
 
               <Scrollbutton isvisible={visibleClass} onClick={scrollButton} />
-              <ImageModal oppen={oppen} closeImagePopup={closeImagePopup} photoUrl={photo}/>
+              <ImageModal
+                oppen={oppen}
+                closeImagePopup={closeImagePopup}
+                photoUrl={photo}
+              />
               <Header display={display} />
               <Nav
                 display="flex"
