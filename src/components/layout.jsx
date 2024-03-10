@@ -49,16 +49,19 @@ export default function Layout({ children, display }) {
   const { isOpen, onOpen, onClose } = useDisclosure({ id: "order-modal" });
 
   const [visibleClass, setVisibleClass] = useState("hidden");
-  const [oppen, setopen] = useState("visibility");
+  const [oppen, setopen] = useState("hidden");
   const [modalType, setModalType] = useState("order");
   const [page, setPage] = useState(0);
+  const [photo, setPhoto] = useState('');
 
   const closeImagePopup = () => {
     setopen("hidden");
+    console.log("закрыть")
   };
 
-  const openImagePopup = () => {
+  const openImagePopup = (UrlPhoto) => {
     setopen("visibility");
+    setPhoto(UrlPhoto)
   };
 
   const openModal = useCallback(
@@ -121,7 +124,7 @@ export default function Layout({ children, display }) {
       onModalOpen: openModal,
       onImageModalOpen: openImagePopup,
     }),
-    [visibleClass, openModal, openImagePopup],
+    [visibleClass, openModal, openImagePopup,photo],
   );
 
   return (
@@ -142,7 +145,7 @@ export default function Layout({ children, display }) {
               </Modal>
 
               <Scrollbutton isvisible={visibleClass} onClick={scrollButton} />
-              <ImageModal oppen={oppen} closeImagePopup={closeImagePopup} />
+              <ImageModal oppen={oppen} closeImagePopup={closeImagePopup} photoUrl={photo}/>
               <Header display={display} />
               <Nav
                 display="flex"

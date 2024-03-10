@@ -32,7 +32,7 @@ const Kitchen = () => {
             width="100%"
             cursor="pointer"
             _hover={{ textDecoration: "none", transform: "scale(1.05)" }}
-            onClick={context.onImageModalOpen}
+            onClick={context.onImageModalOpen(photo)}
           >
             <Image
               src={photo}
