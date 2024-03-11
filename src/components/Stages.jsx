@@ -22,7 +22,7 @@ const Stages = () =>
             <Flex flexDirection="column" padding={5} borderRadius={5} boxShadow='0px -5px 10px 0px rgba(0, 0, 0, 0.5)'>
                 <Text color="#79B52D" fontWeight='bold' fontSize='2rem' marginLeft="auto">03</Text>
                 <Text paddingTop={2} paddingBottom={2} fontSize='1.7rem' fontWeight='bold'>Проектирование</Text>
-                <Text>Составляем дизайн проект и просчитываем стоимость</Text>
+                <Text>Составляем дизайн-проект и просчитываем стоимость</Text>
             </Flex>
             <Flex flexDirection="column" padding={5} borderRadius={5} boxShadow='0px -5px 10px 0px rgba(0, 0, 0, 0.5)'>
                 <Text color="#79B52D" fontWeight='bold' fontSize='2rem' marginLeft="auto">04</Text>

@@ -17,7 +17,7 @@ const Examples = () =>
                         <Image src={kithen} borderRadius="15px" backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
                     </Box>
                     <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Кухни</Text>
-                    <Text paddingTop={2} fontWeight="bold">от 50 000 р</Text>
+                    <Text paddingTop={2} fontWeight="bold">от 80 000 р</Text>
                     <Text paddingTop={2} fontSize={{ sm: "1rem", md: "1rem", xl: "1.5rem" }}>Кухня – одно из самых эмоциональных мест. Это эпицентр воспоминаний и приятных встреч</Text>
                 </Box>
             </Link>
@@ -37,7 +37,7 @@ const Examples = () =>
                         <Image src={gar} borderRadius="15px" backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
                     </Box>
                     <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Гардеробные</Text>
-                    <Text paddingTop={2} fontWeight="bold">от 25 000 р</Text>
+                    <Text paddingTop={2} fontWeight="bold">от 40 000 р</Text>
                     <Text paddingTop={2} fontSize={{ sm: "1rem", md: "1rem", xl: "1.5rem" }}>Рациональная организация пространства – это настоящая философия выбора мебели</Text>
                 </Box>
             </Link>
@@ -48,7 +48,7 @@ const Examples = () =>
                     </Box>
                     <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Прихожие</Text>
                     <Text paddingTop={2} fontWeight="bold">от 25 000 р</Text>
-                    <Text paddingTop={2} fontSize={{ sm: "1rem", md: "1rem", xl: "1.5rem" }}>это визитная карточка дома, при взгляде на которую у гостей и посетителей формируется первое впечатление обо всём интерьере.</Text>
+                    <Text paddingTop={2} fontSize={{ sm: "1rem", md: "1rem", xl: "1.5rem" }}>Визитная карточка дома, при взгляде на которую у гостей и посетителей формируется первое впечатление обо всём интерьере.</Text>
                 </Box>
             </Link>
 
