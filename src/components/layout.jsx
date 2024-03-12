@@ -6,7 +6,9 @@ import {
   Modal,
   ModalOverlay,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
+import axios from "axios";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -45,6 +47,10 @@ const initialValues = {
   },
 };
 
+axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+
 export default function Layout({ children, display }) {
   const { isOpen, onOpen, onClose } = useDisclosure({ id: "order-modal" });
 
@@ -53,6 +59,9 @@ export default function Layout({ children, display }) {
   const [modalType, setModalType] = useState("");
   const [page, setPage] = useState(0);
   const [photo, setPhoto] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const toast = useToast();
 
   const closeImagePopup = () => {
     setopen("hidden");
@@ -75,26 +84,70 @@ export default function Layout({ children, display }) {
     return modalType === "order" || modalType === "simple";
   }, [modalType]);
 
+  const getStringCategories = (categories) => {
+    const categoriesArray = [];
+
+    categories.closet && categoriesArray.push("шкафы");
+    categories.dressingRoom && categoriesArray.push("гардеробные");
+    categories.kitchen && categoriesArray.push("кухни");
+    categories.other && categoriesArray.push("другое");
+
+    return `${categoriesArray}`;
+  };
+
   const hanldeSubmit = useCallback(
     (values, { resetForm }) => {
-      console.log(isModal);
-
-      if (isModal && page !== 1) {
+      if (modalType === "order" && page !== 1) {
         setPage((currentPage) => currentPage + 1);
         return;
       }
 
-      // send e-mail here
-      console.log(values);
+      setIsLoading(true);
 
-      if (isModal) {
-        onClose();
-        setPage(0);
-      }
+      const category = getStringCategories(values.categories);
 
-      resetForm();
+      axios
+        .post("/mail", { name: values.name, phone: values.phone, category })
+        .then((response) => {
+          console.log(response);
+
+          if (response.status === 200) {
+            toast({
+              title: "Данные для связи отправленны",
+              description: "Мы скоро с вами свяжемся",
+              status: "success",
+              duration: 5000,
+              isClosable: true,
+            });
+
+            if (isModal) {
+              onClose();
+              setPage(0);
+            }
+
+            setIsLoading(false);
+            resetForm();
+          }
+        })
+        .catch(() => {
+          toast({
+            title: "Что-то пошло не так",
+            description: "Попробуйте снова через 15 минут",
+            status: "error",
+            duration: 5000,
+            isClosable: true,
+          });
+
+          if (isModal) {
+            onClose();
+            setPage(0);
+          }
+
+          resetForm();
+          setIsLoading(false);
+        });
     },
-    [isModal, page],
+    [isModal, page, modalType],
   );
 
   const closeModal = (resetForm) => () => {
@@ -132,6 +185,7 @@ export default function Layout({ children, display }) {
   const contextValue = useMemo(
     () => ({
       visibleClass,
+      isLoading,
       onModalOpen: openModal,
       onImageModalOpen: openImagePopup,
     }),
@@ -154,7 +208,6 @@ export default function Layout({ children, display }) {
                   closeModal={closeModal(props.resetForm)}
                 />
               </Modal>
-
               <Scrollbutton isvisible={visibleClass} onClick={scrollButton} />
               <ImageModal
                 oppen={oppen}

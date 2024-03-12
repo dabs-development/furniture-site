@@ -2,6 +2,7 @@ import { createContext } from "react";
 
 const defaultContextValue = {
   visibleClass: "",
+  isLoading: false,
   onModalOpen: () => null,
   onImageModalOpen: () => null,
 };

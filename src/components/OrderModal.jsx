@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useContext, useMemo } from "react";
 import {
   Button,
   ModalContent,
@@ -6,14 +6,17 @@ import {
   ModalFooter,
   ModalBody,
   FormControl,
+  Spinner,
 } from "@chakra-ui/react";
 import { useFormikContext } from "formik";
 
 import MainInfo from "./form/MainInfo";
 import Categories from "./form/Categories";
+import AppContext from "../context";
 
 const OrderModal = ({ type, page, closeModal }) => {
   const { values, submitForm } = useFormikContext();
+  const { isLoading } = useContext(AppContext);
 
   const isSimple = useMemo(() => {
     return type === "simple";
@@ -59,7 +62,7 @@ const OrderModal = ({ type, page, closeModal }) => {
     }
 
     return false;
-  }, [values, page, isMainValid]);
+  }, [values, page, isMainValid, isSimple]);
 
   const btnValue = useMemo(() => {
     if (isSimple) {
@@ -67,7 +70,7 @@ const OrderModal = ({ type, page, closeModal }) => {
     }
 
     return page === 1 ? "Отправить" : "Далее";
-  }, [type, page]);
+  }, [isSimple, page]);
 
   return (
     <FormControl as="form" onSubmit={handleSubmit}>
@@ -75,14 +78,18 @@ const OrderModal = ({ type, page, closeModal }) => {
         <ModalHeader>Оставьте заявку</ModalHeader>
         <ModalBody>{renderCurrentModal}</ModalBody>
         <ModalFooter>
-          <Button
-            type="submit"
-            colorScheme="blue"
-            mr={3}
-            isDisabled={isSubmitDisabled}
-          >
-            {btnValue}
-          </Button>
+          {isLoading ? (
+            <Spinner mr="2rem" />
+          ) : (
+            <Button
+              type="submit"
+              colorScheme="blue"
+              mr={3}
+              isDisabled={isSubmitDisabled}
+            >
+              {btnValue}
+            </Button>
+          )}
           <Button onClick={closeModal}>Отменить</Button>
         </ModalFooter>
       </ModalContent>

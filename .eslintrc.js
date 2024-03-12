@@ -31,6 +31,7 @@ module.exports = {
     "react/jsx-boolean-value": 0,
     "react/jsx-props-no-spreading": 0,
     "no-alert": 0,
-    "jsx-a11y/media-has-caption" :0,
+    "jsx-a11y/media-has-caption": 0,
+    "no-unused-expressions": 0,
   },
 };
