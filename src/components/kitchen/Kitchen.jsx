@@ -38,7 +38,7 @@ const Kitchen = () => {
               src={photo}
               backgroundPosition="center"
               objectFit="cover"
-              Width="100%"
+              width="100%"
               height="100%"
             />
           </Box>

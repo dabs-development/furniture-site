@@ -14,7 +14,7 @@ const Examples = () =>
             <Link to="/kitchen/" >
                 <Box display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>
                     <Box height={400} width="100%">
-                        <Image src={kithen} borderRadius="15px" backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
+                        <Image src={kithen} borderRadius="15px" backgroundPosition="center" objectFit="cover" width="100%" height="100%"/>
                     </Box>
                     <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Кухни</Text>
                     <Text paddingTop={2} fontWeight="bold">от 80 000 р</Text>
@@ -24,7 +24,7 @@ const Examples = () =>
             <Link to="/cabinets/" display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>
                 <Box display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>
                     <Box height={400} width="100%">
-                        <Image src={shkaff} borderRadius="15px" backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
+                        <Image src={shkaff} borderRadius="15px" backgroundPosition="center" objectFit="cover" width="100%" height="100%"/>
                     </Box>
                     <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Шкафы</Text>
                     <Text paddingTop={2} fontWeight="bold">от 30 000 р</Text>
@@ -34,7 +34,7 @@ const Examples = () =>
             <Link to="/wardrobes/" display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>
                 <Box display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>
                     <Box height={400} width="100%">
-                        <Image src={gar} borderRadius="15px" backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
+                        <Image src={gar} borderRadius="15px" backgroundPosition="center" objectFit="cover" width="100%" height="100%"/>
                     </Box>
                     <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Гардеробные</Text>
                     <Text paddingTop={2} fontWeight="bold">от 40 000 р</Text>
@@ -44,7 +44,7 @@ const Examples = () =>
             <Link to="/hallways/" display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>
                 <Box display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>
                     <Box height={400} width="100%">
-                        <Image src={prih} borderRadius="15px" backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
+                        <Image src={prih} borderRadius="15px" backgroundPosition="center" objectFit="cover" width="100%" height="100%"/>
                     </Box>
                     <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Прихожие</Text>
                     <Text paddingTop={2} fontWeight="bold">от 25 000 р</Text>

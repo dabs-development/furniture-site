@@ -27,7 +27,7 @@ const Hallways = () => {
         >
           {photos?.map((photo, index) => (
             <Box key={`image-${index}`} height={340} width="100%" cursor="pointer" _hover={{ textDecoration: "none", transform: 'scale(1.05)' }} onClick={context.onImageModalOpen(photo)}>
-              <Image src={photo} backgroundPosition="center" objectFit="cover" Width="100%" height="100%"/>
+              <Image src={photo} backgroundPosition="center" objectFit="cover" width="100%" height="100%"/>
             </Box>
           ))}
         </Grid>
