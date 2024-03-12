@@ -10,8 +10,8 @@ const Stages = () =>
             <Text fontSize={{ sm: "2rem", md: "2rem", xl: "3rem" }}>КАК МЫ РАБОТАЕМ</Text>
             <Text fontSize={{ sm: "1.4rem", md: "1.4rem", xl: "3rem" }} color="#79B52D">Схема работы</Text>
         </Flex>
-        <Flex>
-            <Grid gridTemplateColumns={{ xl: '1fr 1fr 1fr', lg: '1fr 1fr 1fr', md: '1fr 1fr', sm: "1fr" }} gap={5} >
+        <Flex justifyContent="center" alignItems="center" flexDirection={{ xl: 'row', lg: 'row', md: 'column ', sm: "column" }}>
+            <Grid gridTemplateColumns={{ xl: '1fr 1fr ', lg: '1fr 1fr ', md: '1fr ', sm: "1fr" }} gap={5} >
                 <Flex flexDirection="column" padding={5} borderRadius={5} boxShadow='0px -5px 10px 0px rgba(0, 0, 0, 0.5)'>
                     <Text color="#79B52D" fontSize='2rem' fontWeight='bold' marginLeft="auto">01</Text>
                     <Text paddingTop={2} paddingBottom={2} fontSize='1.7rem' fontWeight='bold'>Знакомство</Text>
@@ -43,9 +43,9 @@ const Stages = () =>
                     <Text>Договариваемся о дате, привозим и устанавливаем</Text>
                 </Flex>
             </Grid>
-            <Flex>
-                <video src={video}>
-
+            <Flex minW="330px" margin={5} padding={5} boxShadow='0px -5px 10px 0px rgba(0, 0, 0, 0.5)' borderRadius={5} height={550}>
+                <video  controls>
+                <source src={video} type="video/mp4" />
                 </video>
             </Flex>
         </Flex>
