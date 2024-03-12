@@ -12,7 +12,7 @@ const mainText =
 
 const Kitchen = () => {
   const context = useContext(AppContext);
-
+ console.log(context.onImageModalOpen)
   return (
     <Category name="Кухни" mainText={mainText} block="context">
       <Grid
@@ -32,7 +32,7 @@ const Kitchen = () => {
             width="100%"
             cursor="pointer"
             _hover={{ textDecoration: "none", transform: "scale(1.05)" }}
-            onClick={context.onImageModalOpen(photo)}
+            onclick={context.onImageModalOpen()}
           >
             <Image
               src={photo}

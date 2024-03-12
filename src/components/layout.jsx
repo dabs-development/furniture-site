@@ -62,6 +62,7 @@ export default function Layout({ children, display }) {
   const openImagePopup = (UrlPhoto) => {
     setopen("visibility");
     setPhoto(UrlPhoto);
+    console.log("открыть")
   };
 
   const openModal = useCallback(
@@ -124,7 +125,7 @@ export default function Layout({ children, display }) {
       onModalOpen: openModal,
       onImageModalOpen: openImagePopup,
     }),
-    [visibleClass, openModal, openImagePopup, photo],
+    [visibleClass, openModal,photo],
   );
 
   return (
