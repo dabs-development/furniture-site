@@ -125,7 +125,7 @@ export default function Layout({ children, display }) {
       onModalOpen: openModal,
       onImageModalOpen: openImagePopup,
     }),
-    [visibleClass, openModal,photo],
+    [visibleClass, openModal,openImagePopup],
   );
 
   return (
