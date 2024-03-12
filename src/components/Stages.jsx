@@ -44,8 +44,8 @@ const Stages = () =>
                 </Flex>
             </Grid>
             <Flex minW="330px" margin={5} padding={5} boxShadow='0px -5px 10px 0px rgba(0, 0, 0, 0.5)' borderRadius={5} height={550}>
-                <video  controls autoPlay="autoplay" loop>
-                <source src={video} type="video/mp4" autoPlay="autoplay"/>
+                <video  controls autoPlay="autoplay" loop  muted>
+                <source src={video} type="video/mp4" />
                 </video>
             </Flex>
         </Flex>
