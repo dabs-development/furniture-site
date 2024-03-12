@@ -50,19 +50,17 @@ export default function Layout({ children, display }) {
 
   const [visibleClass, setVisibleClass] = useState("hidden");
   const [oppen, setopen] = useState("hidden");
-  const [modalType, setModalType] = useState("order");
+  const [modalType, setModalType] = useState("");
   const [page, setPage] = useState(0);
   const [photo, setPhoto] = useState("");
 
   const closeImagePopup = () => {
     setopen("hidden");
-    console.log("закрыть");
   };
 
   const openImagePopup = (UrlPhoto) => () => {
     setopen("visibility");
     setPhoto(UrlPhoto);
-    console.log("открыть");
   };
 
   const openModal = useCallback(
@@ -73,19 +71,31 @@ export default function Layout({ children, display }) {
     [onOpen],
   );
 
-  const hanldeSubmit = (values, { resetForm }) => {
-    if (modalType === "order" && page !== 1) {
-      setPage((currentPage) => currentPage + 1);
-      return;
-    }
+  const isModal = useMemo(() => {
+    return modalType === "order" || modalType === "simple";
+  }, [modalType]);
 
-    // send e-mail here
-    console.log(values);
+  const hanldeSubmit = useCallback(
+    (values, { resetForm }) => {
+      console.log(isModal);
 
-    onClose();
-    setPage(0);
-    resetForm();
-  };
+      if (isModal && page !== 1) {
+        setPage((currentPage) => currentPage + 1);
+        return;
+      }
+
+      // send e-mail here
+      console.log(values);
+
+      if (isModal) {
+        onClose();
+        setPage(0);
+      }
+
+      resetForm();
+    },
+    [isModal, page],
+  );
 
   const closeModal = (resetForm) => () => {
     setPage(0);
