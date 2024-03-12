@@ -17,6 +17,7 @@ import prih from "../images/prih(1).jpg";
 const ImageModal = ({ oppen, closeImagePopup, photoUrl }) => {
   return (
     <Flex
+    display={{ xl: "flex", lg: "flex", md: "flex", sm: "none" }}
       position="fixed"
       width="100%"
       height="100%"
