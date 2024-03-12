@@ -78,7 +78,7 @@ const Header = ({ display }) => {
           padding={{ md: "1rem", sm: "1rem" }}
           minWidth="275px"
         >
-          Телефон: +7 (927) 288-99-33
+          Телефон: +7 (927) 288-99-33 
           <br />
           Почта: topqualitymebel@mail.ru
         </GridItem>
