@@ -36,7 +36,7 @@ const Footer = () => (
       </Box>
       <Spacer />
       <Flex gap={5} paddingTop={5}>
-        <Link to="#">
+        <Link to="https://wa.me/89272889933">
           <Image
             src={what}
             alt="img"
@@ -45,7 +45,7 @@ const Footer = () => (
             style={{ backgroundSize: "cover" }}
           />
         </Link>
-        <Link to="#">
+        <Link to="https://t.me/YuraB777">
           <Image
             src={teleg}
             alt="img"
@@ -68,7 +68,7 @@ const Footer = () => (
       <Spacer />
       <Flex flexDirection="column" paddingTop={5}>
         <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>+7 (927) 288-99-33</Text>
-        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>topqualitymebel@mail.ru</Text>
+        <Text fontSize={{sm: "sm", md: "md", xl: "xl"}}>info@tqmebel.ru</Text>
         <Text fontSize={{sm: "sm", md: "md", xl: "xl"}} display="none">
           Москва,пр-лавешкина. 45/4
         </Text>

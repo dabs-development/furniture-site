@@ -62,7 +62,7 @@ const Header = ({ display }) => {
           >
             ОСТАВИТЬ ЗАЯВКУ
           </Button>
-          <Link to="#">
+          <Link to="https://wa.me/89272889933">
             <Button bg="#79B52D" colorScheme="teal">
               {" "}
               WHATSAPP
@@ -80,7 +80,7 @@ const Header = ({ display }) => {
         >
           Телефон: +7 (927) 288-99-33 
           <br />
-          Почта: topqualitymebel@mail.ru
+          Почта: info@tqmebel.ru
         </GridItem>
       </Grid>
     </Box>
