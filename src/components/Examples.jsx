@@ -28,7 +28,7 @@ const Examples = () =>
                     </Box>
                     <Text paddingTop={2} fontSize='2rem' color="#79B52D" fontWeight="bold">Шкафы</Text>
                     <Text paddingTop={2} fontWeight="bold">от 30 000 р</Text>
-                    <Text paddingTop={2} fontSize={{ sm: "1rem", md: "1rem", xl: "1.5rem" }}>Рациональная организация пространства – это настоящая философия выбора мебели</Text>
+                    <Text paddingTop={2} fontSize={{ sm: "1rem", md: "1rem", xl: "1.5rem" }}>Шкаф - это не просто мебельный предмет, а убранство интерьера, где хранится не только одежда, но и множество воспоминаний и секретов</Text>
                 </Box>
             </Link>
             <Link to="/wardrobes/" display="flex" flexDirection="column" padding={5} _hover={{ textDecoration: "none", transform: 'scale(0.95)' }}>

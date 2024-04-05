@@ -18,7 +18,7 @@ const Contacts = () => (
           </Text>
           <Box height="1px" bg="black" width="100%" />
           <Text fontSize="2xl">+7 (927) 288-99-33</Text>
-          <Text fontSize="2xl">topqualitymebel@mail.ru</Text>
+          <Text fontSize="2xl">info@tqmebel.ru</Text>
         </WrapItem>
         <WrapItem flexDirection="column" marginLeft={1} display="none">
           <Text fontWeight="bold" fontSize="xl">
