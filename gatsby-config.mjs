@@ -1,4 +1,8 @@
 const config = {
+  siteMetadata: {
+    description: `Мебель на заказ в г. Ухта`,
+    siteUrl: `https://tqmebel.ru`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
