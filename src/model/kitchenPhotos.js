@@ -19,7 +19,12 @@ import kitchen15 from "../images/kux(15).jpg";
 import kitchen17 from "../images/kux(17).jpg";
 import kitchen18 from "../images/kux(18).jpg";
 import kitchen19 from "../images/kux(19).jpg";
-
+import kitchen22 from "../images/kux(22).jpg";
+import kitchen23 from "../images/kux(23).jpg";
+import kitchen24 from "../images/kux(24).jpg";
+import kitchen25 from "../images/kux(25).jpg";
+import kitchen26 from "../images/kux(26).jpg";
+import kitchen27 from "../images/kux(27).jpg";
 
 export default [
   kitchen1,
@@ -43,4 +48,10 @@ export default [
   kitchen17,
   kitchen18,
   kitchen19,
+  kitchen22,
+  kitchen23,
+  kitchen24,
+  kitchen25,
+  kitchen26,
+  kitchen27,
 ];
