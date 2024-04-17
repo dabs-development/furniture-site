@@ -47,7 +47,7 @@ const initialValues = {
   },
 };
 
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = "https://tqmebel.ru";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 
