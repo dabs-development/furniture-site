@@ -5,8 +5,10 @@ import { Box, Flex, Text, Button } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// TODO: WTF fix naming vars
 import fon from "../images/fon1.jpg";
 import fonn from "../images/fon2.jpeg";
+// end TODO
 import AppContext from "../context";
 
 const settings = {
