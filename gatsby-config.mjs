@@ -1,6 +1,6 @@
 const config = {
   siteMetadata: {
-    description: `Мебель на заказ в г. Ухта`,
+    description: `Мебель на заказ в г. Москва`,
     siteUrl: `https://tqmebel.ru`,
   },
   plugins: [
